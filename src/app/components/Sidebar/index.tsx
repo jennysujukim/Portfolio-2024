@@ -7,15 +7,18 @@ import { usePathname } from "next/navigation";
 import logo from "@/app/assets/logo.svg";
 import profile from "@/app/assets/profile.jpg";
 import arrowRight from "@/app/assets/arrow-right.svg";
+// components
+import Header from "@/app/components/Header";
 // styles
 import styles from "./Sidebar.module.scss";
 
+type GenerateContentProps = {
+  path: string;
+}
 
-function GenerateContent(){
+function GenerateContent({ path }: GenerateContentProps){
 
-  const pathname = usePathname()
-
-  if(pathname === '/'){
+  if(path === '/'){
     return(
       <>
         <Image 
@@ -80,7 +83,7 @@ function GenerateContent(){
         </div>
       </>
     )
-  } else if(pathname === '/about'){
+  } else if(path === '/about'){
       return(
         <>
           <Image 
@@ -111,27 +114,14 @@ function GenerateContent(){
 }
 
 export default function Sidebar() {
+  const pathname = usePathname()
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.content_container}>
-        <GenerateContent />
+        <GenerateContent path={pathname} />
       </div>
-      <header className={styles.header}>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/resume" target="_blank">Resume</Link>
-            </li>
-            <li>
-              <Link href="/archives">Archives</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header path={pathname} />
     </div>
   )
 }
