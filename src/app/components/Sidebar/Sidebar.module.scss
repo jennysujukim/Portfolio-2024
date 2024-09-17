@@ -1,0 +1,84 @@
+@use "../../sass/abstracts/" as *;
+
+.wrapper {
+  @include md {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  @include lg {
+    width: 350px;
+    max-width: 350px;
+  }
+}
+
+// TOP CONTENT //
+.logo, .profile {
+  width: 100%;
+  height: auto;
+}
+
+.content_container {
+  padding: $box_spacing_md;
+  border-bottom: 1px solid $black_light;
+}
+
+.content {
+  margin: 1rem 0;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.underline {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle_shape {
+  position: absolute;
+  top: 40px;
+  width: 4.7rem;
+  height: 2.5rem;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.details_wrapper {
+  margin: 2rem 0;
+}
+
+.details_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  h6 {
+    min-width: 60px;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: $grey_light;
+
+    &:hover {
+      color: $black_light;
+    }
+  }
+}
+
+.arrow {
+  margin: 0 0.6rem;
+}
+
+
+// HEADER //
+.header {
+  padding: $box_spacing_md;
+}

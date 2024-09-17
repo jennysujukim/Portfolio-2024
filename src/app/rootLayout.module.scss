@@ -1,0 +1,31 @@
+@use "./sass/abstracts/" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+
+  @include md {
+    flex-direction: row;
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid $black_light;
+}
+
+.footer_texts {
+  margin-left: calc(350px + 3rem);
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

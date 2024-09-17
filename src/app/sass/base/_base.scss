@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: $black_light;
+  background: $white_light;
+  font-family: var(--font-helveticaNeue);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+// GLOBAL CLASSNAME //
+.sidebar_wrapper {
+  width: 100%;
+  border-bottom: 1px solid $black_light;
+
+  @include md {
+    width: unset;
+    border-bottom: unset;
+    border-right: 1px solid $black_light;
+    height: 100vh;
+  }
+}
+
+.main_wrapper {
+  padding: 1rem;
+  width: 100%;
+
+  @include md {
+    flex: 1;
+  }
+}

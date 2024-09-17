@@ -1,3 +1,8 @@
+// components
+import Sidebar from '@/app/components/Sidebar';
+// styles
+// import styles from './homePage.module.scss';
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -5,7 +10,12 @@ export default function HomeLayout({
 }>) {
   return (
     <>
-      {children}
+      <div className="sidebar_wrapper">
+        <Sidebar />
+      </div>
+      <div className="main_wrapper">
+        {children}
+      </div>
     </>
   );
 }
