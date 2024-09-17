@@ -1,8 +1,6 @@
 // components
 import Sidebar from '@/app/components/Sidebar';
 import SubNav from '@/app/components/SubNav';
-// styles
-// import styles from './homePage.module.scss';
 
 export default function HomeLayout({
   children,
