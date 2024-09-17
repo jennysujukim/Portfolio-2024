@@ -1,27 +1,42 @@
 "use client"
-import { usePathname } from "next/navigation"
+
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+// assets
+import arrow from '@/app/assets/arrow-left.svg';
 // styles
 import styles from './SubNav.module.scss';
 
-function GenerateContent() {
-  const pathname = usePathname()
+type GenerateContentProps = {
+  path: string;
+}
 
-  if(pathname !== "/"){
+function GenerateContent({ path }: GenerateContentProps) {
+  
+  if(path !== "/"){
     return(
       <div>
-        <button>Go Back</button>
+        <button>
+          <Image 
+            src={arrow}
+            width={30}
+            height={15}
+            alt=""
+          />
+          Go Back
+        </button>
       </div>
     )
   } else {
     return (
-      <ul>
-        <li>
+      <ul className={styles.container}>
+        <li className={styles.button}>
           <button>All</button>
         </li>
-        <li>
+        <li className={styles.button}>
           <button>Develop</button>
         </li>
-        <li>
+        <li className={styles.button}>
           <button>Design</button>
         </li>
       </ul>
@@ -30,9 +45,12 @@ function GenerateContent() {
 }
 
 export default function SubNav() {
+
+  const pathname = usePathname()
+
   return (
     <div className={styles.wrapper}>
-      <GenerateContent />
+      <GenerateContent path={pathname} />
     </div>
   )
 }

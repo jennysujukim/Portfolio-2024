@@ -29,6 +29,20 @@ li {
   list-style: none;
 }
 
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
 
 // GLOBAL CLASSNAME //
 .sidebar_wrapper {
@@ -45,6 +59,7 @@ li {
 
 .main_wrapper {
   width: 100%;
+  position: relative;
 
   @include md {
     flex: 1;

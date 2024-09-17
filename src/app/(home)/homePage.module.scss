@@ -1,5 +1,6 @@
 @use "../sass/abstracts/" as *;
 
 .page {
+  margin-top: $subNav_height_lg;
   padding: $box_spacing_md;
 }
