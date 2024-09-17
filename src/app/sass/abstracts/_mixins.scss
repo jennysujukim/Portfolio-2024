@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-@mixin flexbox($justify, $align, $direction: false){
+@mixin flex($justify, $align, $direction: false){
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -8,6 +8,15 @@
   @if $direction {
       flex-direction: $direction;
   }
+}
+
+@mixin fixed($top: false, $right: false, $bottom: false, $left: false){
+  position: fixed;
+
+  @if $top { top: $top; }
+  @if $right { right: $right; }
+  @if $bottom { bottom: $bottom; }
+  @if $left { left: $left; }
 }
 
 @mixin absolute($top: false, $right: false, $bottom: false, $left: false) {
@@ -60,10 +69,4 @@
 
 @mixin gridRow($start, $end) {
   grid-row: $start / span $end;
-}
-
-@mixin solidLine($border) {
-  width: 100%;
-  border: 0 none transparent;
-  border-bottom: $border;
 }

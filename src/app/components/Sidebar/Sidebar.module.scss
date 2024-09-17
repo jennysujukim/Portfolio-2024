@@ -2,13 +2,13 @@
 
 .wrapper {
   @include md {
-    width: 300px;
-    max-width: 300px;
+    width: $sidebar_width_md;
+    max-width: $sidebar_width_md;
   }
 
   @include lg {
-    width: 350px;
-    max-width: 350px;
+    width: $sidebar_width_lg;
+    max-width: $sidebar_width_lg;
   }
 }
 
@@ -41,8 +41,7 @@
 }
 
 .circle_shape {
-  position: absolute;
-  top: 40px;
+  @include absolute($top: 40px);
   width: 4.7rem;
   height: 2.5rem;
   border: 2px solid #000000;
@@ -54,9 +53,7 @@
 }
 
 .details_container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex(flex-start, center);
 
   h6 {
     min-width: 60px;

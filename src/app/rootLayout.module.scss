@@ -1,10 +1,7 @@
 @use "./sass/abstracts/" as *;
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex(flex-start, flex-start, column);
   width: 100%;
 
   @include md {
@@ -15,17 +12,13 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  @include fixed($bottom: 0, $left: 0);
   width: 100%;
   border-top: 1px solid $black_light;
 }
 
 .footer_texts {
-  margin-left: calc(350px + 3rem);
-  margin-right: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-left: calc($sidebar_width_lg + $box_spacing_md);
+  margin-right: $box_spacing_md;
+  @include flex(space-between, center);
 }
