@@ -1,6 +1,5 @@
 // components
 import Sidebar from '@/app/components/Sidebar';
-import SubNav from '@/app/components/SubNav';
 
 export default function HomeLayout({
   children,
@@ -13,7 +12,6 @@ export default function HomeLayout({
         <Sidebar />
       </div>
       <div className="main_wrapper">
-        <SubNav />
         {children}
       </div>
     </>

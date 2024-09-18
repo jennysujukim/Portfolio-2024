@@ -7,7 +7,6 @@ import { workData } from "@/lib/workData";
 import { Work } from "@/types/models";
 // assets
 import logo from "@/app/assets/logo-2.svg";
-import profile from "@/app/assets/profile.jpg";
 import arrowRight from "@/app/assets/arrow-right.svg";
 // components
 import Header from "@/app/components/Header";
@@ -98,7 +97,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
           />
           <div className={styles.content}>
             <Image 
-              src={profile}
+              src="/about/profile.jpg"
               alt="Image of Jenny Kim"
               width={300}
               height={300}

@@ -5,6 +5,7 @@ export enum BreakpointType {
 }
 
 export enum CategoryType {
-  DESIGN = 'design',
-  DEVELOP = 'develop'
+  ALL = 'All',
+  DESIGN = 'Design',
+  DEVELOP = 'Develop'
 }

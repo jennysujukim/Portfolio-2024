@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Work } from "@/types/models"
+import { Work } from "@/types/models";
+import { CategoryType } from "@/types/enums";
 // assets
 import arrowUpRight from "@/app/assets/arrow-up-right.svg"
 // styles
@@ -8,9 +9,11 @@ import styles from './Article.module.scss';
 
 type ArticleProps = {
   work: Work;
+  selectedCategory: CategoryType;
 }
 
-export default function Article({ work } : ArticleProps) {
+export default function Article({ work, selectedCategory } : ArticleProps) {
+
   return (
     <article className={styles.wrapper}>
       <Link 
