@@ -1,0 +1,36 @@
+@use "../../sass/abstracts/" as *;
+
+.wrapper {
+  width: 100%;
+  @include absolute($top: 0, $left: 0);
+  z-index: 20;
+  height: $subNav_height_lg;
+}
+
+.container {
+  @include flex(flex-start, center);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+}
+
+.button {
+  flex-basis: 33.33%;
+  border-bottom: 1px solid $black_light;
+
+
+  &:nth-child(2){
+    border-left: 1px solid $black_light;
+    border-right: 1px solid $black_light;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}

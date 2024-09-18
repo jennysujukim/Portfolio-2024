@@ -1,3 +1,7 @@
+// components
+import Sidebar from '@/app/components/Sidebar';
+import SubNav from '@/app/components/SubNav';
+
 export default function HomeLayout({
   children,
 }: Readonly<{
@@ -5,7 +9,13 @@ export default function HomeLayout({
 }>) {
   return (
     <>
-      {children}
+      <div className="sidebar_wrapper">
+        <Sidebar />
+      </div>
+      <div className="main_wrapper">
+        <SubNav />
+        {children}
+      </div>
     </>
   );
 }

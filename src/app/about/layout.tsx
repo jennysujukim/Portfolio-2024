@@ -1,3 +1,6 @@
+// components
+import Sidebar from "@/app/components/Sidebar";
+
 export default function AboutLayout({
   children,
 }: Readonly<{
@@ -5,7 +8,12 @@ export default function AboutLayout({
 }>) {
   return (
     <>
-      {children}
+      <div className="sidebar_wrapper">
+        <Sidebar />
+      </div>
+      <div className="main_wrapper">
+        {children}
+      </div>
     </>
   );
 }

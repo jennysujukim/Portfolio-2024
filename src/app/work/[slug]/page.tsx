@@ -1,7 +1,14 @@
-import React from 'react'
+import { workData } from "@/lib/workData";
+// styles
+import styles from "./workPage.module.scss";
 
 export default function WorkPage() {
+
+  const works = workData().works;
+
   return (
-    <div>This is individual workpage.</div>
+    <div className={styles.page}>
+
+    </div>
   )
 }
