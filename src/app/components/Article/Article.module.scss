@@ -9,6 +9,8 @@
 .images_container {
   @include flex(flex-start, center);
   gap: 1.5rem;
+
+  &:hover .image { transform: rotate(0deg); }
 }
 
 .image {
@@ -24,17 +26,14 @@
 
 .image.transform_1_2 {
   transform: rotate(-20deg);
-  &:hover { transform: rotate(0deg); }
 }
 
 .image.transform_2_3 {
   transform: rotate(10deg);
-  &:hover { transform: rotate(0deg); }
 }
 
 .image.transform_3_1 {
   transform: rotate(-50deg);
-  &:hover { transform: rotate(0deg); }
 }
 
 .details_container {

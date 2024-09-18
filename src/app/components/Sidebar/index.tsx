@@ -3,8 +3,10 @@
 import Image from "next/image"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { workData } from "@/lib/workData";
+import { Work } from "@/types/models";
 // assets
-import logo from "@/app/assets/logo.svg";
+import logo from "@/app/assets/logo-2.svg";
 import profile from "@/app/assets/profile.jpg";
 import arrowRight from "@/app/assets/arrow-right.svg";
 // components
@@ -14,13 +16,14 @@ import styles from "./Sidebar.module.scss";
 
 type GenerateContentProps = {
   path: string;
+  work: Work | undefined;
 }
 
-function GenerateContent({ path }: GenerateContentProps){
+function GenerateContent({ path, work }: GenerateContentProps){
 
   if(path === '/'){
     return(
-      <>
+      <div className={styles.content_container}>
         <Image 
           src={logo}
           alt="logo of Jenny Kim Portfolio"
@@ -81,11 +84,11 @@ function GenerateContent({ path }: GenerateContentProps){
             </div>
           </div>
         </div>
-      </>
+      </div>
     )
   } else if(path === '/about'){
       return(
-        <>
+        <div className={styles.content_container}>
           <Image 
             src={logo}
             alt="logo of Jenny Kim Portfolio"
@@ -102,12 +105,78 @@ function GenerateContent({ path }: GenerateContentProps){
               className={styles.profile}
             />
           </div>
-        </>
+        </div>
       )
-  } else {
+  } else if(path.includes("/work")) {
     return (
       <>
-        This is rest.
+        {work &&
+          <>
+            <div className={styles.content_container}>
+              <div className={styles.work_title_container}>
+                <h1 className={styles.work_title}>{work.title}</h1>
+                <span className={styles.work_type}>{work.type}</span>
+              </div>
+              <div className={styles.work_description_container}>
+                <p>{work.description}</p>
+                <div className={styles.work_keywords_container}>
+                  {work.keywords.map((keyword, index) => (
+                    <span 
+                      key={index}
+                      className={styles.work_keyword}
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className={styles.details_container}>
+                <h6>View</h6>
+                <Image 
+                  src={arrowRight}
+                  alt=""
+                  width={20}
+                  height={10}
+                  className={styles.arrow}
+                />
+                <div>
+                  <Link 
+                    href={work.livesite}
+                    target="_blank"
+                  >
+                    Livesite,
+                  </Link>
+                  <Link
+                    href={work.repo}
+                    target="_blank"
+                  >
+                    Repo
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className={styles.work_problemsolving}>
+              <div className={styles.work_problemsolving_container}>
+                <h3>About</h3>
+                {work.content.intro.map((sentence, index) => (
+                  <p key={index}>{sentence}</p>
+                ))}
+              </div>
+              <div className={styles.work_problemsolving_container}>
+                <h3>Challenge</h3>
+                {work.content.challenge.map((sentence, index) => (
+                  <p key={index}>{sentence}</p>
+                ))}
+              </div>
+              <div className={styles.work_problemsolving_container}>
+                <h3>Solution</h3>
+                {work.content.solution.map((sentence, index) => (
+                  <p key={index}>{sentence}</p>
+                ))}
+              </div>
+            </div>
+          </>
+        }
       </>
     )
   }
@@ -115,12 +184,11 @@ function GenerateContent({ path }: GenerateContentProps){
 
 export default function Sidebar() {
   const pathname = usePathname()
+  const work = workData().works.find((work) => work.slug === pathname.split('/')[2])
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.content_container}>
-        <GenerateContent path={pathname} />
-      </div>
+      <GenerateContent path={pathname} work={work} />
       <Header path={pathname} />
     </div>
   )

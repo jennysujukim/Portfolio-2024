@@ -13,9 +13,10 @@ type ArticleProps = {
 export default function Article({ work } : ArticleProps) {
   return (
     <article className={styles.wrapper}>
-      <Link href={`/work/${work.slug}`}>
-
-      <div className={styles.images_container}>
+      <Link 
+        href={`/work/${work.slug}`}
+        className={styles.images_container}
+      >
         {work.thumbnails.map((thumbnail, index) => (
           // <Image 
           //   key={index}
@@ -32,7 +33,7 @@ export default function Article({ work } : ArticleProps) {
             {thumbnail.src}
           </div>
         ))}
-      </div>
+      </Link>
       <div className={styles.details_container}>
         <div className={styles.details_left}>
           <div className={styles.details_title}>
@@ -57,7 +58,6 @@ export default function Article({ work } : ArticleProps) {
           ))}
         </div>
       </div>
-      </Link>
     </article>
   )
 }

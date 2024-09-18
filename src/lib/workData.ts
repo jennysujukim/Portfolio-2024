@@ -33,17 +33,14 @@ export const workData = () => {
         repo: "https://github.com/jennysujukim/sadie-lee-personal-website",
         content: {
           intro: [
-            "intro sentence 1",
-            "intro sentence 2",
-            "intro sentence 3",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ipsum elit, tincidunt vitae elit ut, facilisis sagittis orci. Fusce semper, diam id rhoncus pulvinar, nisl elit vestibulum mauris, a suscipit magna diam sit amet dui. Fusce sit amet odio velit.",
           ],
           challenge: [
-            "challenge sentence 1",
-            "challenge sentence 2"
+            "Mauris bibendum posuere fringilla. Quisque ut sodales leo, sed ullamcorper nunc.",
+            "Ut placerat tellus erat, a lacinia diam malesuada pharetra. Vivamus in augue nisi. Nunc a egestas lectus."
           ],
           solution: [
-            "solution sentence 1",
-            "solution sentence 2",
+            "Ut placerat tellus erat, a lacinia diam malesuada pharetra. Vivamus in augue nisi. Nunc a egestas lectus."
           ],
           images: [
             {

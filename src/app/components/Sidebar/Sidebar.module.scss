@@ -63,6 +63,7 @@
     text-decoration: underline;
     font-weight: bold;
     color: $grey_light;
+    margin-right: 0.2rem;
 
     &:hover {
       color: $black_light;
@@ -72,4 +73,55 @@
 
 .arrow {
   margin: 0 0.6rem;
+}
+
+// WORK PAGE //
+.work_title_container {
+  margin-bottom: $box_spacing_md;
+}
+
+.work_title {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.work_type {
+  color: $grey_light;
+}
+
+.work_description_container {
+  margin-bottom: $box_spacing_md;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.work_keywords_container {
+  @include flex(flex-start, center);
+  flex-wrap: wrap;
+  margin-bottom: $box_spacing_md;
+}
+
+.work_keyword {
+  font-size: 0.8rem;
+  background: $lightgrey_light;
+  padding: $textbox_spacing_md;
+  margin: 0.25rem 0;
+  margin-right: 0.5rem;
+}
+
+.work_problemsolving {
+  padding: $box_spacing_md;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.work_problemsolving_container {
+  margin-bottom: $box_spacing_md;
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
 }

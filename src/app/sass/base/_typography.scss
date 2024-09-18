@@ -18,7 +18,7 @@ h2, .fs_h2 {
 
 h3, .fs_h3 {
   font-size: $fs_h3_sm; 
-  font-weight: 300;
+  font-weight: 600;
   @include md { font-size: $fs_h3_md; }
   @include lg { font-size: $fs_h3_lg; }
   @include xl { font-size: $fs_h3_xl; }
