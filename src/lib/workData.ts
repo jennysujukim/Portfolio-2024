@@ -6,6 +6,7 @@ export const workData = () => {
     works: [
       {
         id: 1,
+        slug: "sadie-lee",
         title: "Sadie Lee",
         description: "Headless CMS web development for graphic designer’s portfolio.",
         category: [ CategoryType.DEVELOP ],
@@ -13,16 +14,19 @@ export const workData = () => {
         keywords: [ "Web Development", "Headless CMS", "Next JS", "Sanity", "TypeScript", "Tailwind CSS" ],
         thumbnails: [
           {
-            src: "",
-            alt: "thumbnail 1"
+            id: "1_1",
+            src: "/works/sadie-lee/thumbnail-1.jpg",
+            alt: "thumbnail 1",
           },
           {
-            src: "",
-            alt: "thumbnail 2"
+            id: "1_2",
+            src: "/works/sadie-lee/thumbnail-2.jpg",
+            alt: "thumbnail 2",
           },
           {
-            src: "",
-            alt: "thumbnail 3"
+            id: "1_3",
+            src: "/works/sadie-lee/thumbnail-3.jpg",
+            alt: "thumbnail 3",
           },
         ],
         livesite: "https://www.sadielee-design.com",
@@ -68,6 +72,7 @@ export const workData = () => {
       },
       {
         id: 2,
+        slug: "belong-where-you-are",
         title: "Belong Where You Are",
         description: "Digital album that showcase photos taken with Fuji Quicksnap.",
         category: [ CategoryType.DEVELOP, CategoryType.DESIGN ],
@@ -75,16 +80,19 @@ export const workData = () => {
         keywords: [ "Web Development", "Digital Design", "Next JS", "Contentful", "TypeScript" ],
         thumbnails: [
           {
-            src: "",
+            id: "2_1",
+            src: "/works/sadie-lee/thumbnail-1.jpg",
             alt: "thumbnail 1"
           },
           {
-            src: "",
+            id: "2_2",
+            src: "/works/sadie-lee/thumbnail-2.jpg",
             alt: "thumbnail 2"
           },
           {
-            src: "",
-            alt: "thumbnail 3"
+            id: "2_3",
+            src: "/works/sadie-lee/thumbnail-3.jpg",
+            alt: "thumbnail 3",
           },
         ],
         livesite: "https://belong-where-you-are.vercel.app",
@@ -130,6 +138,7 @@ export const workData = () => {
       },
       {
         id: 3,
+        slug: "phonebox-app",
         title: "PhoneBox App",
         description: "Digital album that showcase photos taken with Fuji Quicksnap.",
         category: [ CategoryType.DEVELOP ],
@@ -137,15 +146,18 @@ export const workData = () => {
         keywords: [ "Web Development", "Digital Design", "Next JS", "Contentful", "TypeScript" ],
         thumbnails: [
           {
-            src: "",
-            alt: "thumbnail 1"
+            id: "3_1",
+            src: "/works/sadie-lee/thumbnail-1.jpg",
+            alt: "thumbnail 1",
           },
           {
-            src: "",
-            alt: "thumbnail 2"
+            id: "3_2",
+            src: "/works/sadie-lee/thumbnail-2.jpg",
+            alt: "thumbnail 2",
           },
           {
-            src: "",
+            id: "3_3",
+            src: "/works/sadie-lee/thumbnail-3.jpg",
             alt: "thumbnail 3"
           },
         ],

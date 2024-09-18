@@ -2,12 +2,14 @@ import { CategoryType } from "./enums";
 
 export type Work = {
   id: number;
+  slug: string;
   title: string;
   description: string;
   category: CategoryType[];
   type: string;
   keywords: string[];
   thumbnails: {
+    id: string;
     src: string;
     alt: string;
   }[];

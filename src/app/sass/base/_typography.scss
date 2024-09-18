@@ -10,7 +10,7 @@ h1, .fs_h1 {
 
 h2, .fs_h2 {
   font-size: $fs_h2_sm; 
-  font-weight: 300;
+  font-weight: 600;
   @include md { font-size: $fs_h2_md; }
   @include lg { font-size: $fs_h2_lg; }
   @include xl { font-size: $fs_h2_xl; }
