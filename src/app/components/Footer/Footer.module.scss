@@ -1,0 +1,14 @@
+@use "../../sass/abstracts/" as *;
+
+.footer {
+  @include fixed($bottom: 0, $left: 0);
+  width: 100%;
+  border-top: 1px solid $black_light;
+}
+
+.footer_texts {
+  font-size: 0.9rem;
+  margin-left: calc($sidebar_width_lg + $box_spacing_md);
+  margin-right: $box_spacing_md;
+  @include flex(space-between, center);
+}

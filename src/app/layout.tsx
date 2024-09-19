@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+// components
+import Footer from "./components/Footer";
 // styles
 import "./globals.scss";
 import styles from "./rootLayout.module.scss";
@@ -23,12 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main className={styles.main}>
           {children}
         </main>
-        <footer className={styles.footer}>
-          <div className={styles.footer_texts}>
-            <p>Currently in Vancouver, BC | 15 September 2024 | 6:53PM</p>
-            <p>&copy;JENNY KIM 2024</p>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
