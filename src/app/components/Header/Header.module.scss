@@ -8,9 +8,22 @@
   margin-top: 1rem;
 }
 
-.navlink {
+.navlink, .navlink_about {
   margin-bottom: 0.5rem;
   overflow: hidden;
+
+  &_about {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $grey_light;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $black_light;
+    }
+  }
   
   a {
     font-weight: 600;
