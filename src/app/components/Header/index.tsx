@@ -43,7 +43,7 @@ export default function Header({ path }: HeaderProps) {
                   />
                 </Link>
               </li>
-              <li className={styles.navlink}>
+              {/* <li className={styles.navlink}>
                 <Link href="/archives">
                   Archives
                   <Image 
@@ -54,7 +54,7 @@ export default function Header({ path }: HeaderProps) {
                     className={styles.arrow}
                   />
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </header>

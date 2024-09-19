@@ -7,32 +7,31 @@
 }
 
 .images_container {
-  @include flex(flex-start, center);
-  gap: 1.5rem;
+  @include grid(repeat(9, 1fr), 1rem);
+  gap: 1rem;
+  width: 100%;
 
   &:hover .image { transform: rotate(0deg); }
+  &:hover .video { transform: rotate(0deg); }
 }
 
-.image {
+.video, .image {
   width: 100%;
   height: auto;
+  @include gridCol(auto, 3);
   transition: all 300ms ease-in-out;
-
-  // delete below later // 
-  min-height: 350px;
-  background-color: #aae0ff;
-  @include flex(center, center);
 }
 
-.image.transform_1_2 {
+// ADJUST ROTATE ANGLES MANUALLY //
+.image.transform_1_1, .video.transform_1_1 {
   transform: rotate(-20deg);
 }
 
-.image.transform_2_3 {
+.image.transform_2_3, .video.transform_2_3 {
   transform: rotate(10deg);
 }
 
-.image.transform_3_1 {
+.image.transform_3_1, .video.transform_3_1 {
   transform: rotate(-50deg);
 }
 

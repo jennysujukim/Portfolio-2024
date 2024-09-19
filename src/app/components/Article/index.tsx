@@ -1,7 +1,8 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Work } from "@/types/models";
-import { CategoryType } from "@/types/enums";
+import { ContentType } from "@/types/enums";
 // assets
 import arrowUpRight from "@/app/assets/arrow-up-right.svg"
 // styles
@@ -9,10 +10,9 @@ import styles from './Article.module.scss';
 
 type ArticleProps = {
   work: Work;
-  selectedCategory: CategoryType;
 }
 
-export default function Article({ work, selectedCategory } : ArticleProps) {
+export default function Article({ work } : ArticleProps) {
 
   return (
     <article className={styles.wrapper}>
@@ -21,20 +21,30 @@ export default function Article({ work, selectedCategory } : ArticleProps) {
         className={styles.images_container}
       >
         {work.thumbnails.map((thumbnail, index) => (
-          // <Image 
-          //   key={index}
-          //   src={thumbnail.src}
-          //   width={300}
-          //   height={300}
-          //   alt={thumbnail.alt}
-          //   className={styles.image}
-          // />
-          <div 
-            key={index} 
-            className={`${styles.image} ${styles[`transform_${thumbnail.id}`]}`}
-          >
-            {thumbnail.src}
-          </div>
+          <React.Fragment key={index}>
+            {thumbnail.type === ContentType.VIDEO ? 
+            <video
+              className={`${styles.video} ${styles[`transform_${thumbnail.id}`]}`} 
+              width="500" 
+              height="500" 
+              preload="none"
+              autoPlay
+              loop
+              muted
+            >
+              <source src={thumbnail.src} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            :
+            <Image 
+              src={thumbnail.src}
+              width={300}
+              height={300}
+              alt={thumbnail.alt}
+              className={`${styles.image} ${styles[`transform_${thumbnail.id}`]}`}
+            />
+            }
+          </React.Fragment>
         ))}
       </Link>
       <div className={styles.details_container}>

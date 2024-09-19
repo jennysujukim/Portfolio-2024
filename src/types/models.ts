@@ -1,4 +1,4 @@
-import { CategoryType } from "./enums";
+import { CategoryType, ContentType } from "./enums";
 
 export type Work = {
   id: number;
@@ -10,6 +10,7 @@ export type Work = {
   keywords: string[];
   thumbnails: {
     id: string;
+    type: ContentType;
     src: string;
     alt: string;
   }[];

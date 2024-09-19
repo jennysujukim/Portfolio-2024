@@ -9,3 +9,8 @@ export enum CategoryType {
   DESIGN = 'Design',
   DEVELOP = 'Develop'
 }
+
+export enum ContentType {
+  VIDEO = 'video',
+  IMAGE = 'image'
+}
