@@ -37,11 +37,14 @@ export default function HomePage() {
 
   return (
     <>
-      <SubNav handleClickFilter={handleClickFilter} />
+      <SubNav
+        selectedCategory={category}
+        handleClickFilter={handleClickFilter}
+      />
       <div className={styles.page}>
         {selectedWorks.map((work, index) => (
           <div key={index}>
-            <Article work={work} selectedCategory={category} />
+            <Article work={work} />
           </div>
         ))}
       </div>

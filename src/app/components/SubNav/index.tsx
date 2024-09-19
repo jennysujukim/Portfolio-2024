@@ -10,14 +10,16 @@ import styles from './SubNav.module.scss';
 
 type GenerateContentProps = {
   path: string;
+  selectedCategory: CategoryType;
   handleClickFilter: (value: CategoryType) => void;
 }
 
 type SubNavProps = {
- handleClickFilter: (value: CategoryType) => void;
+  selectedCategory: CategoryType;
+  handleClickFilter: (value: CategoryType) => void;
 }
 
-function GenerateContent({ path, handleClickFilter }: GenerateContentProps) {
+function GenerateContent({ path, selectedCategory, handleClickFilter }: GenerateContentProps) {
 
   if(path !== "/"){
     return(
@@ -36,13 +38,18 @@ function GenerateContent({ path, handleClickFilter }: GenerateContentProps) {
   } else {
     return (
       <ul className={styles.container}>
-        <li className={styles.button}>
+        <li className={selectedCategory === CategoryType.ALL ? `${styles.button} ${styles.active}` : styles.button}>
           <button onClick={() => handleClickFilter(CategoryType.ALL)}>{CategoryType.ALL}</button>
         </li>
-        <li className={styles.button}>
-          <button onClick={() => handleClickFilter(CategoryType.DEVELOP)}>{CategoryType.DEVELOP}</button>
+        <li className={selectedCategory === CategoryType.DEVELOP ? `${styles.button} ${styles.active}` : `${styles.button}`}>
+          <button 
+            className={selectedCategory === CategoryType.DEVELOP ? styles.active_dev : ''}
+            onClick={() => handleClickFilter(CategoryType.DEVELOP)}
+          >
+            {CategoryType.DEVELOP}
+          </button>
         </li>
-        <li className={styles.button}>
+        <li className={selectedCategory === CategoryType.DESIGN ? `${styles.button} ${styles.active}` : styles.button}>
           <button onClick={() => handleClickFilter(CategoryType.DESIGN)}>{CategoryType.DESIGN}</button>
         </li>
       </ul>
@@ -50,13 +57,17 @@ function GenerateContent({ path, handleClickFilter }: GenerateContentProps) {
   }
 }
 
-export default function SubNav({ handleClickFilter }: SubNavProps) {
+export default function SubNav({ handleClickFilter, selectedCategory }: SubNavProps) {
 
   const pathname = usePathname()
 
   return (
     <div className={styles.wrapper}>
-      <GenerateContent path={pathname} handleClickFilter={handleClickFilter} />
+      <GenerateContent 
+        path={pathname} 
+        handleClickFilter={handleClickFilter}
+        selectedCategory={selectedCategory}
+      />
     </div>
   )
 }
