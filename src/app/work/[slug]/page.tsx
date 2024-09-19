@@ -1,7 +1,16 @@
-import React from 'react'
+// components
+import SubNav from '@/app/components/SubNav';
+import WorkContent from "@/app/components/WorkContent";
+// styles
+import styles from "./workPage.module.scss";
 
 export default function WorkPage() {
   return (
-    <div>This is individual workpage.</div>
+    <>
+      <SubNav />
+      <div className={styles.page}>
+        <WorkContent />
+      </div>
+    </>
   )
 }

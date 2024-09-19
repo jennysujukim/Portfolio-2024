@@ -1,0 +1,66 @@
+@use "../../sass/abstracts/" as *;
+
+.wrapper {
+  width: 50%;
+  @include absolute($bottom: 0, $left: 0, $right: 0);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 20;
+  height: $subNav_height_lg;
+}
+
+.container {
+  @include flex(center, center);
+  gap: 1rem;
+}
+
+.button {
+  background: $white_light;
+  
+  flex-basis: 33.33%;
+  border: 1px solid $black_light;
+  border-radius: 30px;
+  height: 2rem;
+
+  &:hover { background: $lightgrey_light; }
+
+  .button_inner {
+    width: 100%;
+    @include flex(center, center);
+    transition: all 200ms ease-in-out;
+    border-radius: 30px;
+    height: 2rem;
+  }
+}
+
+.button.active {
+  .button_inner {
+    color: $white_light;
+    background: $black_light;
+    transform: skew(7deg, -7deg);
+
+    &.active_dev{
+      transform: skew(-7deg, 7deg);
+    }
+  }
+}
+
+.button_goback .button_inner, .button_next .button_inner {
+  gap: 0.5rem;
+}
+
+.button_goback:hover {
+  .button_inner {
+    color: $white_light;
+    background: $black_light;
+    transform: skew(-7deg, 7deg);
+  }
+}
+
+.button_next:hover {
+  .button_inner {
+    color: $white_light;
+    background: $black_light;
+    transform: skew(7deg, -7deg);
+  }
+}

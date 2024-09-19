@@ -1,0 +1,70 @@
+@use "../../sass/abstracts/" as *;
+
+.wrapper {
+  min-height: 350px;
+  width: 100%;
+  margin-bottom: 8rem;
+}
+
+.images_container {
+  @include grid(repeat(9, 1fr), 1rem);
+  gap: 1rem;
+  width: 100%;
+
+  &:hover .image { transform: rotate(0deg); }
+  &:hover .video { transform: rotate(0deg); }
+}
+
+.video, .image {
+  width: 100%;
+  height: auto;
+  @include gridCol(auto, 3);
+  transition: all 300ms ease-in-out;
+}
+
+// ADJUST ROTATE ANGLES MANUALLY //
+.image.transform_1_1, .video.transform_1_1 {
+  transform: rotate(-20deg);
+}
+
+.image.transform_2_3, .video.transform_2_3 {
+  transform: rotate(10deg);
+}
+
+.image.transform_3_1, .video.transform_3_1 {
+  transform: rotate(-50deg);
+}
+
+.details_container {
+  @include grid(repeat(12, 1fr), 1rem);
+  margin: $box_spacing_md 0;
+}
+
+.details_left {
+  @include gridCol(auto, 7);
+  @include flex(space-between, flex-start, column);
+}
+
+.details_right {
+  @include gridCol(auto, 5);
+  @include flex(flex-end, center);
+  flex-wrap: wrap;
+}
+
+
+.details_title {
+  @include flex(flex-start, center);
+
+  h2 {
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+}
+
+.keyword {
+  font-size: 0.8rem;
+  background: $lightgrey_light;
+  padding: 0 0.25rem;
+  margin: 0.25rem 0;
+  margin-right: 0.5rem;
+}

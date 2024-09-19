@@ -1,0 +1,41 @@
+@use "../../sass/abstracts/" as *;
+
+.header {
+  padding: $box_spacing_md;
+}
+
+.nav {
+  margin-top: 1rem;
+}
+
+.navlink {
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  
+  a {
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    color: $grey_light;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $black_light;
+    }
+
+    &:hover .arrow {
+      bottom: 0;
+      top: 0;
+      margin-bottom: auto;
+      margin-top: auto;
+      right: -30px;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: -40px;
+  right: -15px;
+  transition: all 200ms ease-in-out;
+}

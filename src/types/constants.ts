@@ -1,9 +1,7 @@
 export type Dimensions = { 
-  mobile: 320,
-  tablet: 600,
-  laptop: 1024,
-  desktop: 1200,
-  desktopLg: 1920,
+  md: 768,
+  lg: 1024,
+  lx: 1536,
 }
 
 export type Colours = {

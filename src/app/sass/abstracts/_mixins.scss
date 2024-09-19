@@ -1,0 +1,72 @@
+@use './variables' as *;
+
+@mixin flex($justify, $align, $direction: false){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if $direction {
+      flex-direction: $direction;
+  }
+}
+
+@mixin fixed($top: false, $right: false, $bottom: false, $left: false){
+  position: fixed;
+
+  @if $top { top: $top; }
+  @if $right { right: $right; }
+  @if $bottom { bottom: $bottom; }
+  @if $left { left: $left; }
+}
+
+@mixin absolute($top: false, $right: false, $bottom: false, $left: false) {
+  position: absolute;
+
+  @if $top { top: $top; }
+  @if $right { right: $right; }
+  @if $bottom { bottom: $bottom; }
+  @if $left { left: $left; }
+}
+
+@mixin absoluteCenterHorizontal($textAlign: false) {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  
+  @if $textAlign {
+    text-align: $textAlign;
+  }
+}
+
+@mixin absoluteCenterVertical($textAlign: false) {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  
+  @if $textAlign {
+    text-align: $textAlign;
+  }
+}
+
+@mixin grid($col, $colGap, $row: false, $rowGap: false){
+  display: grid;
+  grid-template-columns: $col;
+  column-gap: $colGap;
+
+  @if $row {
+    grid-template-rows: $row;
+    row-gap: $rowGap;
+  }
+}
+
+@mixin gridCol($start, $end) {
+  grid-column: $start / span $end;
+}
+
+@mixin gridRow($start, $end) {
+  grid-row: $start / span $end;
+}

@@ -1,1 +1,57 @@
 @use '../abstracts/' as *;
+
+h1, .fs_h1 {
+ font-size: $fs_h1_sm; 
+ font-weight: 300;
+ @include md { font-size: $fs_h1_md; }
+ @include lg { font-size: $fs_h1_lg; }
+ @include xl { font-size: $fs_h1_xl; }
+}
+
+h2, .fs_h2 {
+  font-size: $fs_h2_sm; 
+  font-weight: 600;
+  @include md { font-size: $fs_h2_md; }
+  @include lg { font-size: $fs_h2_lg; }
+  @include xl { font-size: $fs_h2_xl; }
+}
+
+h3, .fs_h3 {
+  font-size: $fs_h3_sm; 
+  font-weight: 600;
+  @include md { font-size: $fs_h3_md; }
+  @include lg { font-size: $fs_h3_lg; }
+  @include xl { font-size: $fs_h3_xl; }
+}
+
+h4, .fs_h4 {
+  font-size: $fs_h4_sm; 
+  font-weight: 300;
+  @include md { font-size: $fs_h4_md; }
+  @include lg { font-size: $fs_h4_lg; }
+  @include xl { font-size: $fs_h4_xl; }
+}
+
+h5, .fs_h5 {
+  font-size: $fs_h5_sm; 
+  font-weight: 300;
+  @include md { font-size: $fs_h5_md; }
+  @include lg { font-size: $fs_h5_lg; }
+  @include xl { font-size: $fs_h5_xl; }
+}
+
+h6, .fs_h6 {
+  font-size: $fs_h6_sm; 
+  font-weight: 600;
+  @include md { font-size: $fs_h6_md; }
+  @include lg { font-size: $fs_h6_lg; }
+  @include xl { font-size: $fs_h6_xl; }
+}
+
+p, .fs_p {
+  font-size: $fs_p_sm; 
+  font-weight: 300;
+  @include md { font-size: $fs_p_md; }
+  @include lg { font-size: $fs_p_lg; }
+  @include xl { font-size: $fs_p_xl; }
+}

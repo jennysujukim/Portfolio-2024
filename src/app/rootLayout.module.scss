@@ -1,0 +1,12 @@
+@use "./sass/abstracts/" as *;
+
+.main {
+  @include flex(flex-start, flex-start, column);
+  width: 100%;
+
+  @include md {
+    flex-direction: row;
+    overflow: hidden;
+    height: 100vh;
+  }
+}

@@ -1,29 +1,60 @@
 // COLOURS //
 $white_light: #ffffff;
 $black_light: #000000;
+$grey_light: #939393;
+$lightgrey_light: #EFEFEF;
 $white_dark: #ffffff;
 $black_dark: #000000;
 
+
 // BREAKPOINTS //
 $breakpoints : (
-  "mobile": 320px,
-	"tablet": 600px,
-	"laptop": 1024px,
-	"desktop": 1200px,
-  "desktop-lg": 1920px
+	"md": 768px,
+	"lg": 1024px,
+	"xl": 1536px,
 );
 
-// FONT FAMILY //
-$helveticaNeue_light: '';
-$helveticaNeue_roman: '';
-$helveticaNeue_medium: '';
-$helveticaNeue_heavy: '';
-
 // FONT SIZES //
-$fs_h2_mob: '';
-$fs_h2_mob: '';
-$fs_h2_mob: '';
+$fs_h1_sm: 2rem;
+$fs_h1_md: 2.1rem;
+$fs_h1_lg: 2.1rem;
+$fs_h1_xl: 4rem;
 
-$fs_h3_mob: '';
-$fs_h3_mob: '';
-$fs_h3_mob: '';
+$fs_h2_sm: 1rem;
+$fs_h2_md: 1rem;
+$fs_h2_lg: 1.2rem;
+$fs_h2_xl: 1.5rem;
+
+$fs_h3_sm: '';
+$fs_h3_md: '';
+$fs_h3_lg: '';
+$fs_h3_xl: '';
+
+$fs_h4_sm: '';
+$fs_h4_md: '';
+$fs_h4_lg: '';
+$fs_h4_xl: '';
+
+$fs_h5_sm: '';
+$fs_h5_md: '';
+$fs_h5_lg: '';
+$fs_h5_xl: '';
+
+$fs_h6_sm: 0.8rem;
+$fs_h6_md: 1rem;
+$fs_h6_lg: 1rem;
+$fs_h6_xl: 1.2rem;
+
+$fs_p_sm: '';
+$fs_p_md: '';
+$fs_p_lg: '';
+$fs_p_xl: '';
+
+// SPACING //
+$box_spacing_md: 1.5rem;
+$textbox_spacing_md: 0 0.25rem;
+
+// SIZES //
+$sidebar_width_md: 300px;
+$sidebar_width_lg: 450px;
+$subNav_height_lg: 2rem;
