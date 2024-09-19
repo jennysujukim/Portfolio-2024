@@ -1,6 +1,5 @@
 // components
 import Sidebar from '@/app/components/Sidebar';
-import SubNav from '@/app/components/SubNav';
 
 export default function AllWorkLayout({
   children,
@@ -13,7 +12,6 @@ export default function AllWorkLayout({
         <Sidebar />
       </div>
       <div className="main_wrapper">
-        <SubNav />
         {children}
       </div>
     </>

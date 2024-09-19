@@ -33,7 +33,7 @@ export default function Header({ path }: HeaderProps) {
                   href="/resume" 
                   target="_blank"
                 >
-                  Resume
+                  CV
                   <Image 
                     src={arrowUpRight}
                     width={20}

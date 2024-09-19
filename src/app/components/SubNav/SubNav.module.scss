@@ -10,7 +10,7 @@
 }
 
 .container {
-  @include flex(flex-start, center);
+  @include flex(center, center);
   gap: 1rem;
 }
 
@@ -24,9 +24,9 @@
 
   &:hover { background: $lightgrey_light; }
 
-  button {
+  .button_inner {
     width: 100%;
-    text-align: center;
+    @include flex(center, center);
     transition: all 200ms ease-in-out;
     border-radius: 30px;
     height: 2rem;
@@ -34,7 +34,7 @@
 }
 
 .button.active {
-  button {
+  .button_inner {
     color: $white_light;
     background: $black_light;
     transform: skew(7deg, -7deg);
@@ -42,5 +42,25 @@
     &.active_dev{
       transform: skew(-7deg, 7deg);
     }
+  }
+}
+
+.button_goback .button_inner, .button_next .button_inner {
+  gap: 0.5rem;
+}
+
+.button_goback:hover {
+  .button_inner {
+    color: $white_light;
+    background: $black_light;
+    transform: skew(-7deg, 7deg);
+  }
+}
+
+.button_next:hover {
+  .button_inner {
+    color: $white_light;
+    background: $black_light;
+    transform: skew(7deg, -7deg);
   }
 }

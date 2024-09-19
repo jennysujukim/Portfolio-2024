@@ -1,14 +1,16 @@
-import { workData } from "@/lib/workData";
+// components
+import SubNav from '@/app/components/SubNav';
+import WorkContent from "@/app/components/WorkContent";
 // styles
 import styles from "./workPage.module.scss";
 
 export default function WorkPage() {
-
-  const works = workData().works;
-
   return (
-    <div className={styles.page}>
-
-    </div>
+    <>
+      <SubNav />
+      <div className={styles.page}>
+        <WorkContent />
+      </div>
+    </>
   )
 }
