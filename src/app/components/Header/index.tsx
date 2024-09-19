@@ -7,9 +7,10 @@ import styles from './Header.module.scss'
 
 type HeaderProps = {
   path: string;
+  onClickScroll: (id: string) => void;
 }
 
-export default function Header({ path }: HeaderProps) {
+export default function Header({ path, onClickScroll }: HeaderProps) {
   return (
     <>
       {path === '/' &&
@@ -58,6 +59,28 @@ export default function Header({ path }: HeaderProps) {
             </ul>
           </nav>
         </header>
+      }
+      {path === '/about' && 
+        <ul className={styles.header}>
+          <li
+            className={styles.navlink_about} 
+            onClick={() => onClickScroll("introduction")}
+          >
+            Hello, stranger!
+          </li>
+          <li 
+            className={styles.navlink_about} 
+            onClick={() => onClickScroll("summary")} 
+          >
+            TLDR
+          </li>
+          {/* <li
+            className={styles.navlink_about}  
+            onClick={() => onClickScroll("playlists")}
+          >
+            Ear Pleasing
+          </li> */}
+        </ul>
       }
     </>
   )

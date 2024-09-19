@@ -6,3 +6,64 @@
   overflow-x: hidden;
   height: calc(100vh - ($box_spacing_md * 2));
 }
+
+.subtitle {
+  color: $grey_light;
+  margin-bottom: $box_spacing_md;
+}
+
+.introduction {
+  height: 80vh;
+  padding-top: $box_spacing_md;
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: $box_spacing_md;
+  }
+}
+
+.summary {
+  height: 80vh;
+  padding-top: $box_spacing_md;
+
+  &_card_container {
+    @include grid(repeat(9, 1fr), 2rem);
+  }
+
+  &_card {
+    @include gridCol(auto, 3);
+
+    h6 {
+      font-size: 1.5rem;
+      margin-bottom: $box_spacing_md;
+    }
+  }
+}
+
+.card_list {
+  margin-bottom: 1.5rem;
+}
+
+.list_title_container {
+  @include flex(flex-start, center);
+
+  p {
+    font-weight: bold;
+    background: $lightgrey_light;
+  }
+}
+
+.list_year {
+  color: $grey_light;
+}
+
+.list_keywords {
+  margin-top: 0.4rem;
+}
+
+.playlists {
+  height: 80vh;
+  padding-top: $box_spacing_md;
+}
+
+

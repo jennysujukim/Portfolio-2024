@@ -51,6 +51,7 @@ h6, .fs_h6 {
 p, .fs_p {
   font-size: $fs_p_sm; 
   font-weight: 300;
+  line-height: 1.4;
   @include md { font-size: $fs_p_md; }
   @include lg { font-size: $fs_p_lg; }
   @include xl { font-size: $fs_p_xl; }

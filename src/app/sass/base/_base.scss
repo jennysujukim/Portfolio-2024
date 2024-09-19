@@ -43,6 +43,10 @@ button {
   font: inherit;
 }
 
+::selection {
+  background-color: #2137ff;
+  color: $white_light;
+}
 
 // GLOBAL CLASSNAME //
 .sidebar_wrapper {

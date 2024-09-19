@@ -25,6 +25,12 @@
 
 .content {
   margin: $box_spacing_md 0;
+
+  &_about {
+    position: relative;
+    margin: $box_spacing_md 0;
+    @include flex(center, center);
+  }
 }
 
 .bold {
@@ -50,13 +56,17 @@
 
 .details_wrapper {
   margin: 2rem 0;
+
+  &_about {
+    margin-top: 2rem;
+  }
 }
 
 .details_container {
   @include flex(flex-start, center);
 
   h6 {
-    min-width: 60px;
+    min-width: 70px;
   }
 
   a {
@@ -128,6 +138,22 @@
 
 // ABOUT PAGE //
 .profile {
-  width: 100%;
+  width: 75%;
   height: auto;
+  transform: rotate(-7deg);
+}
+
+.profile_description {
+  max-width: 200px;
+  @include absolute($bottom: -10px, $right: -5px);
+  background-color: blue;
+  color: $white_light;
+  padding: $textbox_spacing_md;
+  transform: rotate(3deg);
+}
+
+.profile_cta {
+  @include absolute($bottom: 85px, $left: -53px);
+  transform: rotate(262deg);
+  font-size: 0.9rem;
 }

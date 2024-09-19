@@ -10,7 +10,6 @@ import arrowLeft from '@/app/assets/arrow-left.svg';
 import arrowRight from '@/app/assets/arrow-right.svg';
 // styles
 import styles from './SubNav.module.scss';
-import next from "next";
 
 type GenerateContentProps = {
   path: string;
@@ -129,7 +128,7 @@ export default function SubNav({ handleClickFilter, selectedCategory }: SubNavPr
     const nextWork = allWorks[nextIndex]
 
     setNextWorkSlug(nextWork.slug)
-  }, [pathname])
+  }, [pathname, allWorks])
 
   return (
     <div className={styles.wrapper}>
