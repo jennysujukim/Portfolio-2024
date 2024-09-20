@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_texts}>
-        <p>Currently in Vancouver, BC | {isTime}</p>
+        <p>Currently in Vancouver | {isTime}</p>
         <p>&copy;JENNY KIM 2024</p>
       </div>
     </footer>

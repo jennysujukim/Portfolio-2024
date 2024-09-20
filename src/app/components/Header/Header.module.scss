@@ -1,24 +1,34 @@
 @use "../../sass/abstracts/" as *;
 
 .header {
-  padding: $box_spacing_md;
+  padding: $box_spacing_sm;
+
+  @include md { padding: $box_spacing_md; }
+  @include xl { padding: $box_spacing_xl; } 
 }
 
 .nav {
-  margin-top: 1rem;
+  @include md { margin-top: 1rem; } 
 }
 
 .navlink, .navlink_about {
   margin-bottom: 0.5rem;
   overflow: hidden;
 
+  &:nth-child(2){
+    margin-bottom: 0;
+  }
+
   &_about {
-    width: fit-content;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $grey_light;
     cursor: pointer;
     transition: all 200ms ease-in-out;
+
+    @include md {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: $black_light;
@@ -27,10 +37,14 @@
   
   a {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     color: $grey_light;
     transition: all 200ms ease-in-out;
+
+    @include md {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: $black_light;
@@ -51,4 +65,9 @@
   bottom: -40px;
   right: -15px;
   transition: all 200ms ease-in-out;
+
+  @include md {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }

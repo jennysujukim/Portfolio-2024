@@ -110,7 +110,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
         />
         <div className={styles.content}>
           <h1>
-            Hi! I’m <span className={styles.bold}>UIUX Engineer</span> building and designing <span className={styles.underline}>interactive</span> user experiences on the <span className={styles.circle}><div className={styles.circle_shape}></div>web</span> with the strong foundations of design.
+            Hi! I’m <span className={styles.bold}>UIUX Engineer</span> building and designing <span className={styles.underline}>interactive</span> user experiences on the <span>web</span> with the strong foundations of design.
           </h1>
         </div>
         <div className={styles.details_wrapper}>
@@ -185,7 +185,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
               draggable={false}
               className={styles.profile}
             />
-            <span className={styles.profile_cta}>*Click Image or Press Spacebar*</span>
+            <span className={styles.profile_cta}>* Click Image or Press Spacebar *</span>
             <span className={styles.profile_description}>{currentDescription}</span>
           </div>
           <div className={styles.details_wrapper_about}>
