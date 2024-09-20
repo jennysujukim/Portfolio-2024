@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { workData } from "@/lib/workData";
 import { CategoryType } from "@/types/enums";
 import { Work } from "@/types/models";
@@ -18,9 +18,10 @@ export default function HomePage() {
     setCategory(value)
   }
 
-  const allWorks = workData().works
-  const devWorks = allWorks.filter(work => work.category.includes(CategoryType.DEVELOP))
-  const desWorks = allWorks.filter(work => work.category.includes(CategoryType.DESIGN))
+  const allWorks = useMemo(() => workData().works, [])
+  const devWorks = useMemo(() => workData().works.filter(work => work.category.includes(CategoryType.DEVELOP)), [])
+  const desWorks = useMemo(() => workData().works.filter(work => work.category.includes(CategoryType.DESIGN)), [])
+
 
   useEffect(() => {
 
@@ -33,7 +34,7 @@ export default function HomePage() {
     } else {
       return;
     }
-  }, [category, setSelectedWorks])
+  }, [category, setSelectedWorks, allWorks, desWorks, devWorks])
 
   return (
     <>
@@ -43,9 +44,10 @@ export default function HomePage() {
       />
       <div className={styles.page}>
         {selectedWorks.map((work, index) => (
-          <div key={index}>
-            <Article work={work} />
-          </div>
+          <Article 
+            work={work} 
+            key={index}
+          />
         ))}
       </div>
     </>

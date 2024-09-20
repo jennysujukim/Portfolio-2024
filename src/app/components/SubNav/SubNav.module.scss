@@ -1,26 +1,37 @@
 @use "../../sass/abstracts/" as *;
 
 .wrapper {
-  width: 50%;
-  @include absolute($bottom: 0, $left: 0, $right: 0);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  position: sticky;
+  top: $box_spacing_sm;
+  margin: 2rem auto;
   z-index: 20;
   height: $subNav_height_lg;
+
+  @include md {
+    width: 50%;
+    @include absolute($top: unset, $bottom: 0, $left: 0, $right: 0);
+  }
 }
 
 .container {
+  margin: 0 $box_spacing_sm;
   @include flex(center, center);
   gap: 1rem;
 }
 
 .button {
   background: $white_light;
-  
+  max-width: 100px;
   flex-basis: 33.33%;
   border: 1px solid $black_light;
   border-radius: 30px;
   height: 2rem;
+
+  @include md { 
+    max-width: unset;
+    width: 100px; 
+  }
 
   &:hover { background: $lightgrey_light; }
 

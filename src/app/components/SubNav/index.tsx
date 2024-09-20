@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -119,7 +119,9 @@ export default function SubNav({ handleClickFilter, selectedCategory }: SubNavPr
 
   const pathname = usePathname()
   const [ nextWorkSlug, setNextWorkSlug ] = useState<string>('')
-  const allWorks = workData().works
+  // const allWorks = workData().works
+
+  const allWorks = useMemo(() => workData().works, [])
 
   useEffect(() => {
     const currentWorkSlug = pathname.split('/')[2]

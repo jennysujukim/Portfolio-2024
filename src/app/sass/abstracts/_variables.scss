@@ -15,13 +15,13 @@ $breakpoints : (
 );
 
 // FONT SIZES //
-$fs_h1_sm: 2rem;
+$fs_h1_sm: 1.8rem;
 $fs_h1_md: 2.1rem;
 $fs_h1_lg: 2.1rem;
 $fs_h1_xl: 4rem;
 
-$fs_h2_sm: 1rem;
-$fs_h2_md: 1rem;
+$fs_h2_sm: 1.5rem;
+$fs_h2_md: 1.2rem;
 $fs_h2_lg: 1.2rem;
 $fs_h2_xl: 1.5rem;
 
@@ -51,7 +51,9 @@ $fs_p_lg: '';
 $fs_p_xl: '';
 
 // SPACING //
+$box_spacing_sm: 1rem;
 $box_spacing_md: 1.5rem;
+$box_spacing_xl: 2rem;
 $textbox_spacing_md: 0 0.25rem;
 
 // SIZES //
