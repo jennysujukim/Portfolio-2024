@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Work } from "@/types/models";
 import { ContentType } from "@/types/enums";
 // assets
-import arrowUpRight from "@/app/assets/arrow-up-right.svg"
+import { PiArrowCircleUpRightLight } from "react-icons/pi";
 // styles
 import styles from './Article.module.scss';
 
@@ -51,12 +51,7 @@ export default function Article({ work } : ArticleProps) {
         <div className={styles.details_left}>
           <div className={styles.details_title}>
             <h2>{work.title}</h2>
-            <Image 
-              src={arrowUpRight}
-              width={16}
-              height={16}
-              alt=""
-            />
+            <PiArrowCircleUpRightLight size={16} />
           </div>
           <p>{work.description}</p>
         </div>

@@ -1,9 +1,13 @@
 @use "../../sass/abstracts/" as *;
 
 .wrapper {
-  min-height: 350px;
   width: 100%;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
+  
+  @include md {
+    min-height: 350px;
+    margin-bottom: 8rem;
+  }
 }
 
 .images_container {
@@ -37,18 +41,29 @@
 
 .details_container {
   @include grid(repeat(12, 1fr), 1rem);
-  margin: $box_spacing_md 0;
+  margin: 2rem 0;
+
+  @include md { margin: $box_spacing_md 0; }
+  @include xl { margin: $box_spacing_xl 0; }
+  
 }
 
 .details_left {
-  @include gridCol(auto, 7);
+  @include gridCol(auto, 12);
   @include flex(space-between, flex-start, column);
+
+  @include md { @include gridCol(auto, 7); }
 }
 
 .details_right {
-  @include gridCol(auto, 5);
-  @include flex(flex-end, center);
+  @include gridCol(auto, 12);
+  @include flex(flex-start, flex-start);
   flex-wrap: wrap;
+
+  @include md {
+    @include gridCol(auto, 5);
+    @include flex(flex-end, center);
+  }
 }
 
 
@@ -67,4 +82,8 @@
   padding: 0 0.25rem;
   margin: 0.25rem 0;
   margin-right: 0.5rem;
+
+  @include xl {
+    font-size: 1rem;
+  }
 }
