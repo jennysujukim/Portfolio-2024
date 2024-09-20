@@ -185,7 +185,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
               draggable={false}
               className={styles.profile}
             />
-            <span className={styles.profile_cta}>*Click Image or Press Spacebar*</span>
+            <span className={styles.profile_cta}>* Click Image or Press Spacebar *</span>
             <span className={styles.profile_description}>{currentDescription}</span>
           </div>
           <div className={styles.details_wrapper_about}>

@@ -1,10 +1,18 @@
 @use "../sass/abstracts/" as *;
 
 .page {
-  padding: $box_spacing_md;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: calc(100vh - ($box_spacing_md * 2));
+  padding: $box_spacing_sm;
+
+  @include md {
+    padding: $box_spacing_md;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - ($box_spacing_md * 2));
+  }
+
+  @include xl {
+    padding: $box_spacing_xl;
+  }
 }
 
 .subtitle {
@@ -13,29 +21,49 @@
 }
 
 .introduction {
-  height: 80vh;
-  padding-top: $box_spacing_md;
+  min-height: 80vh;
+  margin-bottom: 7rem;
+
+  @include md { 
+    padding-top: $box_spacing_md; 
+    margin-bottom: unset;
+  }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: $box_spacing_md;
+
+    @include md { font-size: 1.5rem; } 
   }
 }
 
 .summary {
-  height: 80vh;
-  padding-top: $box_spacing_md;
+  min-height: 80vh;
+  margin-bottom: 7rem;
+
+  @include md {
+    padding-top: $box_spacing_md;
+    margin-bottom: unset;
+  }
 
   &_card_container {
     @include grid(repeat(9, 1fr), 2rem);
   }
 
   &_card {
-    @include gridCol(auto, 3);
+    @include gridCol(auto, 9);
+    margin-bottom: 3rem;
+    @include md { 
+      @include gridCol(auto, 3);
+      margin-bottom: unset;
+    }
 
     h6 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-bottom: $box_spacing_md;
+      @include md {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -62,8 +90,13 @@
 }
 
 .playlists {
-  height: 80vh;
-  padding-top: $box_spacing_md;
+  min-height: 80vh;
+  margin-bottom: 7rem;
+
+  @include md {
+    padding-top: $box_spacing_md;
+    margin-bottom: unset;
+  }
 }
 
 

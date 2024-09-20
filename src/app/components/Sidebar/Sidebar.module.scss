@@ -50,7 +50,11 @@
 
   @include md { margin-bottom: 2rem; }
 
-  &_about { margin-top: 2rem; }
+  &_about { 
+    margin-top: 3rem; 
+
+    @include md { margin-top: 2rem;  };
+  }
 }
 
 .details_container {
@@ -130,8 +134,13 @@
 // ABOUT PAGE //
 .profile {
   width: 75%;
+  max-width: 350px;
   height: auto;
   transform: rotate(-7deg);
+
+  @include md {
+    max-width: unset;
+  }
 }
 
 .profile_description {
@@ -147,4 +156,13 @@
   @include absolute($bottom: 85px, $left: -53px);
   transform: rotate(262deg);
   font-size: 0.9rem;
+  background-color: yellow;
+
+  @include md {
+    @include absolute($bottom: 85px, $left: -75px);
+  }
+
+  @include lg {
+    @include absolute($bottom: 85px, $left: -53px);
+  }
 }

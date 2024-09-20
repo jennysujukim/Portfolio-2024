@@ -4,7 +4,7 @@
   width: 100%;
   position: sticky;
   top: $box_spacing_sm;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem auto;
   z-index: 20;
   height: $subNav_height_lg;
 
@@ -22,7 +22,7 @@
 
 .button {
   background: $white_light;
-  max-width: 100px;
+  max-width: 120px;
   flex-basis: 33.33%;
   border: 1px solid $black_light;
   border-radius: 30px;
@@ -30,7 +30,7 @@
 
   @include md { 
     max-width: unset;
-    width: 100px; 
+    min-width: 130px; 
   }
 
   &:hover { background: $lightgrey_light; }

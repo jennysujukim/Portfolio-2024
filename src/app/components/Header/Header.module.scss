@@ -20,12 +20,15 @@
   }
 
   &_about {
-    width: fit-content;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $grey_light;
     cursor: pointer;
     transition: all 200ms ease-in-out;
+
+    @include md {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: $black_light;
@@ -62,4 +65,9 @@
   bottom: -40px;
   right: -15px;
   transition: all 200ms ease-in-out;
+
+  @include md {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
