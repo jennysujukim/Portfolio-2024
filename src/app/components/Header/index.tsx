@@ -1,6 +1,4 @@
 import Link from 'next/link'
-// assets
-import { PiArrowCircleUpRightLight } from "react-icons/pi";
 // styles
 import styles from './Header.module.scss'
 
@@ -19,10 +17,6 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
               <li className={styles.navlink}>
                 <Link href="/about">
                   About
-                  <PiArrowCircleUpRightLight 
-                    size={20} 
-                    className={styles.arrow}
-                  />
                 </Link>
               </li>
               <li className={styles.navlink}>
@@ -31,21 +25,13 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
                   target="_blank"
                 >
                   CV
-                  <PiArrowCircleUpRightLight 
-                    size={20} 
-                    className={styles.arrow}
-                  />
                 </Link>
               </li>
-              {/* <li className={styles.navlink}>
+              <li className={styles.navlink}>
                 <Link href="/archives">
                   Archives
-                  <PiArrowCircleUpRightLight 
-                    size={20} 
-                    className={styles.arrow}
-                  />
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </nav>
         </header>

@@ -1,73 +1,70 @@
 @use "../../sass/abstracts/" as *;
 
 .header {
-  padding: $box_spacing_sm;
+  @include flex(center, center);
 
-  @include md { padding: $box_spacing_md; }
+  @include md { 
+    display: block;
+    padding: $box_spacing_md; 
+  }
   @include xl { padding: $box_spacing_xl; } 
+
+  nav { width: 100%; }
 }
 
 .nav {
-  @include md { margin-top: 1rem; } 
+  @include flex(center, center);
+  @include md { display: block; } 
 }
 
 .navlink, .navlink_about {
-  margin-bottom: 0.5rem;
-  overflow: hidden;
+  flex-basis: 50%;
+  text-align: center;
+  padding: 0.3rem 0;
+
+  @include md {
+    flex-basis: unset;
+    text-align: unset;
+    padding: unset;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+  }
 
   &:nth-child(2){
-    margin-bottom: 0;
+    border-left: 1px solid $black_light;
+    border-right: 1px solid $black_light;
+
+    @include md { border: unset; } 
   }
 
-  &_about {
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: $grey_light;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-
-    @include md {
-      font-size: 2rem;
-    }
-
-    &:hover {
-      color: $black_light;
-    }
-  }
-  
   a {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: relative;
     color: $grey_light;
     transition: all 200ms ease-in-out;
 
-    @include md {
-      font-size: 2rem;
+    @include md { font-size: 2rem; }
+
+    &:hover { color: $black_light; }
+  }
+
+  &_about {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $grey_light;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    @include md { font-size: 2rem; };
+
+    &:nth-child(2){
+      border-right: unset;
+      @include md { border: unset; } 
     }
 
-    &:hover {
-      color: $black_light;
-    }
-
-    &:hover .arrow {
-      bottom: 0;
-      top: 0;
-      margin-bottom: auto;
-      margin-top: auto;
-      right: -30px;
-    }
+    &:hover { color: $black_light; }
   }
 }
 
-.arrow {
-  position: absolute;
-  bottom: -40px;
-  right: -15px;
-  transition: all 200ms ease-in-out;
-
-  @include md {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
