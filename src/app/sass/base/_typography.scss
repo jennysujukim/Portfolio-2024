@@ -1,11 +1,11 @@
 @use '../abstracts/' as *;
 
 h1, .fs_h1 {
- font-size: $fs_h1_sm; 
- font-weight: 300;
- @include md { font-size: $fs_h1_md; }
- @include lg { font-size: $fs_h1_lg; }
- @include xl { font-size: $fs_h1_xl; }
+  font-size: $fs_h1_sm; 
+  font-weight: 300;
+  @include md { font-size: $fs_h1_md; }
+  @include lg { font-size: $fs_h1_lg; }
+  @include xl { font-size: $fs_h1_xl; }
 }
 
 h2, .fs_h2 {
@@ -42,7 +42,6 @@ h5, .fs_h5 {
 
 h6, .fs_h6 {
   font-size: $fs_h6_sm; 
-  font-weight: 600;
   @include md { font-size: $fs_h6_md; }
   @include lg { font-size: $fs_h6_lg; }
   @include xl { font-size: $fs_h6_xl; }

@@ -51,7 +51,7 @@ export default function Article({ work } : ArticleProps) {
         <div className={styles.details_left}>
           <div className={styles.details_title}>
             <h2>{work.title}</h2>
-            <PiArrowCircleUpRightLight size={16} />
+            <PiArrowCircleUpRightLight size={24} />
           </div>
           <p>{work.description}</p>
         </div>

@@ -6,7 +6,7 @@
   
   @include md {
     min-height: 350px;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -24,11 +24,12 @@
   height: auto;
   @include gridCol(auto, 3);
   transition: all 300ms ease-in-out;
+  border-radius: 3px;
 }
 
 // ADJUST ROTATE ANGLES MANUALLY //
-.image.transform_1_1, .video.transform_1_1 {
-  transform: rotate(-20deg);
+.image.transform_1_2, .video.transform_1_2 {
+  transform: rotate(-7deg);
 }
 
 .image.transform_2_3, .video.transform_2_3 {
@@ -36,7 +37,11 @@
 }
 
 .image.transform_3_1, .video.transform_3_1 {
-  transform: rotate(-50deg);
+  transform: rotate(-30deg);
+}
+
+.image.transform_4_2, .video.transform_4_2 {
+  transform: rotate(-10deg);
 }
 
 .details_container {

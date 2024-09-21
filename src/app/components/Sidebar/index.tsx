@@ -101,13 +101,16 @@ function GenerateContent({ path, work }: GenerateContentProps){
   if(path === '/'){
     return(
       <div className={styles.content_container}>
-        <Image 
-          src={logo}
-          alt="logo of Jenny Kim Portfolio"
-          width={100}
-          height={50}
-          className={styles.logo}
-        />
+        <Link href="/">
+          <Image 
+            src={logo}
+            alt="logo of Jenny Kim Portfolio"
+            width={100}
+            height={50}
+            className={styles.logo}
+            draggable={false}
+          />
+        </Link>
         <div className={styles.content}>
           <h1>
             Hi! I’m <span className={styles.bold}>UIUX Engineer</span> building and designing <span className={styles.underline}>interactive</span> user experiences on the <span>web</span> with the strong foundations of design.
@@ -166,13 +169,16 @@ function GenerateContent({ path, work }: GenerateContentProps){
   } else if(path === '/about'){
       return(
         <div className={styles.content_container}>
-          <Image 
-            src={logo}
-            alt="logo of Jenny Kim Portfolio"
-            width={100}
-            height={50}
-            className={styles.logo}
-          />
+          <Link href="/">
+            <Image 
+              src={logo}
+              alt="logo of Jenny Kim Portfolio"
+              width={100}
+              height={50}
+              className={styles.logo}
+              draggable={false}
+            />
+          </Link>
           <div 
             className={styles.content_about}
             onClick={handleClickProfile}

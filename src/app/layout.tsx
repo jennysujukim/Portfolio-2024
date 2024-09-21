@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Figtree, Inconsolata } from 'next/font/google';
 // components
 import Footer from "./components/Footer";
 // styles
 import "./globals.scss";
 import styles from "./rootLayout.module.scss";
 
-const helveticaNeue = localFont({
-  src: "./fonts/HelveticaNeue-Light.woff2",
+const figtree = Figtree({
+  subsets: ['latin'],
   display: 'swap',
-  variable: '--font-helveticaNeue',
-  weight: "300 400 600 800",
+  variable: '--font-figtree',
+})
+
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inconsolata',
 })
 
 export const metadata: Metadata = {
@@ -21,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${helveticaNeue.variable}`}>
+      <body className={`${figtree.variable} ${inconsolata.variable}`}>
         <main className={styles.main}>
           {children}
         </main>
