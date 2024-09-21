@@ -1,13 +1,10 @@
 "use client"
+
 import { useState, useEffect, useMemo } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { CategoryType } from "@/types/enums";
 import { workData } from "@/lib/workData";
-// assets
-import arrowLeft from '@/app/assets/arrow-left.svg';
-import arrowRight from '@/app/assets/arrow-right.svg';
 // styles
 import styles from './SubNav.module.scss';
 
@@ -34,12 +31,6 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
           className={`${styles.button} ${styles.button_goback}`}
         >
           <div className={styles.button_inner}>
-            <Image 
-              src={arrowLeft}
-              width={30}
-              height={15}
-              alt=""
-            />
             Go Back
           </div>
         </Link>
@@ -49,12 +40,6 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
         >
           <div className={styles.button_inner}>
             View Next
-            <Image 
-              src={arrowRight}
-              width={30}
-              height={15}
-              alt=""
-            />
           </div>
 
         </Link>
@@ -68,12 +53,6 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
           className={`${styles.button} ${styles.button_goback}`}
         >
           <div className={styles.button_inner}>
-            <Image 
-              src={arrowLeft}
-              width={30}
-              height={15}
-              alt=""
-            />
             Go Back
           </div>
         </Link>

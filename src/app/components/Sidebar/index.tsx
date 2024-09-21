@@ -308,26 +308,6 @@ function GenerateContent({ path, work }: GenerateContentProps){
                 </div>
               </div>
             </div>
-            <div className={styles.work_problemsolving}>
-              <div className={styles.work_problemsolving_container}>
-                <h3>About</h3>
-                {work.content.intro.map((sentence, index) => (
-                  <p key={index}>{sentence}</p>
-                ))}
-              </div>
-              <div className={styles.work_problemsolving_container}>
-                <h3>Challenge</h3>
-                {work.content.challenge.map((sentence, index) => (
-                  <p key={index}>{sentence}</p>
-                ))}
-              </div>
-              <div className={styles.work_problemsolving_container}>
-                <h3>Solution</h3>
-                {work.content.solution.map((sentence, index) => (
-                  <p key={index}>{sentence}</p>
-                ))}
-              </div>
-            </div>
           </>
         }
       </>

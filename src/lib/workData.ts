@@ -8,10 +8,10 @@ export const workData = () => {
         id: 1,
         slug: "sadie-lee",
         title: "Sadie Lee",
-        description: "Headless CMS web development for graphic designer’s portfolio.",
+        description: "Headless CMS web development for a graphic designer’s portfolio.",
         category: [ CategoryType.DEVELOP ],
         type: "Client work",
-        keywords: [ "Web Development", "Headless CMS", "Next JS", "Sanity", "TypeScript", "Tailwind CSS" ],
+        keywords: [ "Web Development", "Headless CMS", "NextJS", "Sanity", "TypeScript", "MatterJS", "TailwindCSS" ],
         thumbnails: [
           {
             id: "1_1",
@@ -36,38 +36,46 @@ export const workData = () => {
         repo: "https://github.com/jennysujukim/sadie-lee-personal-website",
         content: {
           intro: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ipsum elit, tincidunt vitae elit ut, facilisis sagittis orci. Fusce semper, diam id rhoncus pulvinar, nisl elit vestibulum mauris, a suscipit magna diam sit amet dui. Fusce sit amet odio velit.",
+            "Sadie Lee is a graphic designer based in London creating experimental design practices. The client requires the portfolio website that showcases her artworks but also interactive site that engage visitors and expresses her creativity at the same time. Main design is done by Sadie Lee, and I developed and offer the feasible and interactive features.",
           ],
           challenge: [
-            "Mauris bibendum posuere fringilla. Quisque ut sodales leo, sed ullamcorper nunc.",
-            "Ut placerat tellus erat, a lacinia diam malesuada pharetra. Vivamus in augue nisi. Nunc a egestas lectus."
+            "The client requires to edit by herself in the future without changing codebase. Balancing the creativity and feasibility on the web was challenging to negotiate while keeping the good UX system."
           ],
           solution: [
-            "Ut placerat tellus erat, a lacinia diam malesuada pharetra. Vivamus in augue nisi. Nunc a egestas lectus."
+            "Integrate headless CMS so the work can keep creative visual but also effortlessly manage the content by client. Optimised SEO."
           ],
-          images: [
+          graphics: [
             {
               id: 1,
-              description: "image 1 description",
-              src: ""
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-1.mp4",
+              alt: "image 1 description",
             },
             {
               id: 2,
-              description: "image 2 description",
-              src: ""
-            }
-          ],
-          body: [
-            { 
-              id: 1,
-              subtitle: "body 1 subtitle 1",
-              text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-2.jpg",
+              alt: "image 2 description",
             },
             {
-              id: 2,
-              text: [ "body 2 text 1" , "body 2 text 2" ]
-            }
-          ]
+              id: 3,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-3.mp4",
+              alt: "image 3 description",
+            },
+            {
+              id: 4,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-5.mp4",
+              alt: "image 5 description",
+            },
+            {
+              id: 5,
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-4.jpg",
+              alt: "image 4 description",
+            },
+          ],
         }
       },
       {
@@ -114,29 +122,38 @@ export const workData = () => {
             "solution sentence 1",
             "solution sentence 2",
           ],
-          images: [
+          graphics: [
             {
               id: 1,
-              description: "image 1 description",
-              src: ""
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-1.mp4",
+              alt: "image 1 description",
             },
             {
               id: 2,
-              description: "image 2 description",
-              src: ""
-            }
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-2.jpg",
+              alt: "image 2 description",
+            },
+            {
+              id: 3,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-3.mp4",
+              alt: "image 3 description",
+            },
+            {
+              id: 4,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-5.mp4",
+              alt: "image 5 description",
+            },
+            {
+              id: 5,
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-4.jpg",
+              alt: "image 4 description",
+            },
           ],
-          body: [
-            { 
-              id: 1,
-              subtitle: "body 1 subtitle 1",
-              text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
-            },
-            {
-              id: 2,
-              text: [ "body 2 text 1" , "body 2 text 2" ]
-            }
-          ]
         }
       },
       {
@@ -252,29 +269,38 @@ export const workData = () => {
             "solution sentence 1",
             "solution sentence 2",
           ],
-          images: [
+          graphics: [
             {
               id: 1,
-              description: "image 1 description",
-              src: ""
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-1.mp4",
+              alt: "image 1 description",
             },
             {
               id: 2,
-              description: "image 2 description",
-              src: ""
-            }
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-2.jpg",
+              alt: "image 2 description",
+            },
+            {
+              id: 3,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-3.mp4",
+              alt: "image 3 description",
+            },
+            {
+              id: 4,
+              type: ContentType.VIDEO,
+              src: "/works/sadie-lee/images/content-5.mp4",
+              alt: "image 5 description",
+            },
+            {
+              id: 5,
+              type: ContentType.IMAGE,
+              src: "/works/sadie-lee/images/content-4.jpg",
+              alt: "image 4 description",
+            },
           ],
-          body: [
-            { 
-              id: 1,
-              subtitle: "body 1 subtitle 1",
-              text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
-            },
-            {
-              id: 2,
-              text: [ "body 2 text 1" , "body 2 text 2" ]
-            }
-          ]
         }
       },
       // {
@@ -315,29 +341,6 @@ export const workData = () => {
       //       "solution sentence 1",
       //       "solution sentence 2",
       //     ],
-      //     images: [
-      //       {
-      //         id: 1,
-      //         description: "image 1 description",
-      //         src: ""
-      //       },
-      //       {
-      //         id: 2,
-      //         description: "image 2 description",
-      //         src: ""
-      //       }
-      //     ],
-      //     body: [
-      //       { 
-      //         id: 1,
-      //         subtitle: "body 1 subtitle 1",
-      //         text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
-      //       },
-      //       {
-      //         id: 2,
-      //         text: [ "body 2 text 1" , "body 2 text 2" ]
-      //       }
-      //     ]
       //   }
       // },
       // {
@@ -378,29 +381,6 @@ export const workData = () => {
       //       "solution sentence 1",
       //       "solution sentence 2",
       //     ],
-      //     images: [
-      //       {
-      //         id: 1,
-      //         description: "image 1 description",
-      //         src: ""
-      //       },
-      //       {
-      //         id: 2,
-      //         description: "image 2 description",
-      //         src: ""
-      //       }
-      //     ],
-      //     body: [
-      //       { 
-      //         id: 1,
-      //         subtitle: "body 1 subtitle 1",
-      //         text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
-      //       },
-      //       {
-      //         id: 2,
-      //         text: [ "body 2 text 1" , "body 2 text 2" ]
-      //       }
-      //     ]
       //   }
       // },
       // {
@@ -441,29 +421,6 @@ export const workData = () => {
       //       "solution sentence 1",
       //       "solution sentence 2",
       //     ],
-      //     images: [
-      //       {
-      //         id: 1,
-      //         description: "image 1 description",
-      //         src: ""
-      //       },
-      //       {
-      //         id: 2,
-      //         description: "image 2 description",
-      //         src: ""
-      //       }
-      //     ],
-      //     body: [
-      //       { 
-      //         id: 1,
-      //         subtitle: "body 1 subtitle 1",
-      //         text: [ "body 1 text 1", "body 1 text 2", "body 1 text 3" ],
-      //       },
-      //       {
-      //         id: 2,
-      //         text: [ "body 2 text 1" , "body 2 text 2" ]
-      //       }
-      //     ]
       //   }
       // },
     ] as Work[]
