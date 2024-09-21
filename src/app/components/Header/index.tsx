@@ -24,7 +24,7 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
                   href="/resume" 
                   target="_blank"
                 >
-                  CV
+                  Resume
                 </Link>
               </li>
               <li className={styles.navlink}>
@@ -57,6 +57,32 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
             Ear Pleasing
           </li> */}
         </ul>
+      }
+      {path.includes('/work') &&
+        <header className={styles.header}>
+          <nav>
+            <ul className={styles.nav}>
+              <li className={styles.navlink}>
+                <Link href="/about">
+                  About
+                </Link>
+              </li>
+              <li className={styles.navlink}>
+                <Link 
+                  href="/resume" 
+                  target="_blank"
+                >
+                  Resume
+                </Link>
+              </li>
+              <li className={styles.navlink}>
+                <Link href="/archives">
+                  Archives
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
       }
     </>
   )

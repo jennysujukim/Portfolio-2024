@@ -1,0 +1,40 @@
+@use "../../sass/abstracts/" as *;
+
+.wrapper {
+  min-height: 80vh;
+}
+
+.section {
+  margin-bottom: 8rem;
+}
+
+.text_container, .intro_container {
+  margin-bottom: $box_spacing_md;
+
+  h3 {
+    margin-bottom: 1rem;
+    color: $grey_light;
+
+    @include xl {
+      margin-bottom: $box_spacing_xl;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: $box_spacing_md;
+
+    @include md { font-size: 1.5rem };
+    @include xl { font-size: 1.8rem };
+  }
+}
+
+.intro_container {
+  margin-bottom: 4rem;
+}
+
+.video, .image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+}
