@@ -1,8 +1,12 @@
 @use "../../sass/abstracts/" as *;
 
 .page {
-  padding: $box_spacing_md;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: calc(100vh - ($box_spacing_md * 2));
+  padding: $box_spacing_sm;
+
+  @include md {
+    padding: $box_spacing_md;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - ($box_spacing_md * 2));
+  }
 }

@@ -14,21 +14,23 @@ export type Work = {
     src: string;
     alt: string;
   }[];
-  livesite: string;
-  repo: string;
+  livesite?: string;
+  repo?: string;
   content: {
     intro: string[];
     challenge: string[];
     solution: string[];
-    images: {
+    graphics: {
       id: number;
-      description: string;
+      type: ContentType;
       src: string;
+      alt: string;
+      description?: string;
     }[];
-    body: {
-      id: number;
-      subtitle: string;
-      text: string[];
-    }[];
+    // body: {
+    //   id: number;
+    //   subtitle: string;
+    //   text: string[];
+    // }[];
   }
 }
