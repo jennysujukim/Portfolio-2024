@@ -27,10 +27,5 @@ export type Work = {
       alt: string;
       description?: string;
     }[];
-    // body: {
-    //   id: number;
-    //   subtitle: string;
-    //   text: string[];
-    // }[];
   }
 }

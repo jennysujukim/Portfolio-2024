@@ -284,28 +284,32 @@ function GenerateContent({ path, work }: GenerateContentProps){
                 </div>
               </div>
               <div className={styles.details_container}>
-                <h6>View</h6>
-                <Image 
-                  src={arrowRight}
-                  alt=""
-                  width={20}
-                  height={10}
-                  className={styles.arrow}
-                />
-                <div>
-                  <Link 
-                    href={work.livesite}
-                    target="_blank"
-                  >
-                    Livesite,
-                  </Link>
-                  <Link
-                    href={work.repo}
-                    target="_blank"
-                  >
-                    Repo
-                  </Link>
-                </div>
+              {work.livesite && work.repo &&
+                  <>
+                    <h6>View</h6>
+                    <Image 
+                      src={arrowRight}
+                      alt=""
+                      width={20}
+                      height={10}
+                      className={styles.arrow}
+                    />
+                    <div>
+                      <Link 
+                        href={work.livesite}
+                        target="_blank"
+                      >
+                        Livesite,
+                      </Link>
+                      <Link
+                        href={work.repo}
+                        target="_blank"
+                      >
+                        Repo
+                      </Link>
+                    </div>
+                  </>              
+                }
               </div>
             </div>
           </>
