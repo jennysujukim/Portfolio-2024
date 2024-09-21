@@ -27,7 +27,7 @@
 }
 
 .content {
-  margin: $box_spacing_md 0;
+  margin: 2rem 0;
 
   &_about {
     position: relative;
@@ -38,46 +38,51 @@
 
 .bold {
   font-weight: 600;
+  background: blue;
+  display: inline-block;
+  transform: rotate(355deg);
+  color: $white_light;
+  padding: $textbox_spacing_md;
 }
 
 .underline {
-  text-decoration: underline;
   font-style: italic;
+  background: yellow;
+  display: inline-block;
+  transform: rotate(3deg);
 }
 
 .details_wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   @include md { margin-bottom: 2rem; }
 
   &_about { 
     margin-top: 3rem; 
-
-    @include md { margin-top: 2rem;  };
   }
 }
 
 .details_container {
   @include flex(flex-start, center);
+  margin-bottom: 0.5rem;
 
-  h6 {
-    min-width: 70px;
-  }
+  h6 { min-width: 70px; }
 
   a {
     text-decoration: underline;
     font-weight: bold;
     color: $grey_light;
     margin-right: 0.2rem;
+    transition: all 200ms ease-in-out;
 
-    &:hover {
-      color: $black_light;
-    }
+    @include xl { font-size: 1.2rem; }
+
+    &:hover { color: $black_light; }
   }
 }
 
 .arrow {
-  margin: 0 0.6rem;
+  margin: 0 1rem;
 }
 
 // WORK PAGE //
