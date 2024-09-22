@@ -1,16 +1,17 @@
 @use "../../sass/abstracts/" as *;
 
 .wrapper {
-  width: 100%;
+  width: fit-content;
   position: sticky;
   top: $box_spacing_sm;
-  margin: 2rem auto 1rem auto;
+  margin: 3rem auto;
   z-index: 20;
   height: $subNav_height_lg;
+  @include flex(center, center);
 
   @include md {
     width: 50%;
-    @include absolute($top: unset, $bottom: 0, $left: 0, $right: 0);
+    @include absolute($top: unset, $bottom: 3rem, $left: 0, $right: 0);
   }
 
   @include lg { margin: 2rem auto 0 auto; };
@@ -20,36 +21,46 @@
   margin: 0 $box_spacing_sm;
   @include flex(center, center);
   gap: 1rem;
+  border: 1px solid $grey_border;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+
+  @include md {  width: unset; }; 
 }
 
 .button {
-  background: $white_light;
-  max-width: 120px;
+  width: 23vw;
   flex-basis: 33.33%;
-  border: 1px solid $black_light;
   border-radius: 30px;
   height: 2rem;
+  font-weight: 500;
 
   @include md { 
-    max-width: unset;
+    width: unset;
     min-width: 130px; 
   }
 
-  &:hover { background: $lightgrey_light; }
+  &:hover { background: rgba(148, 148, 148, 0.3); }
 
   .button_inner {
-    width: 100%;
+    width: 23vw;
     @include flex(center, center);
     transition: all 200ms ease-in-out;
     border-radius: 30px;
     height: 2rem;
+
+    @include md { 
+      width: unset;
+      min-width: 130px; 
+    }
   }
 }
 
 .button.active {
   .button_inner {
     color: $white_light;
-    background: $black_light;
+    background: blue;
     transform: skew(7deg, -7deg);
 
     &.active_dev{
@@ -61,7 +72,7 @@
 .button_goback:hover {
   .button_inner {
     color: $white_light;
-    background: $black_light;
+    background: blue;
     transform: skew(-7deg, 7deg);
   }
 }
@@ -69,7 +80,7 @@
 .button_next:hover {
   .button_inner {
     color: $white_light;
-    background: $black_light;
+    background: blue;
     transform: skew(7deg, -7deg);
   }
 }

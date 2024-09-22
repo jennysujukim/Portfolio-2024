@@ -2,6 +2,7 @@ import { CategoryType, ContentType } from "./enums";
 
 export type Work = {
   id: number;
+  bgColor: string; 
   slug: string;
   title: string;
   description: string;

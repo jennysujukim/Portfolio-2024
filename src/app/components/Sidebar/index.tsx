@@ -265,7 +265,10 @@ function GenerateContent({ path, work }: GenerateContentProps){
       <>
         {work &&
           <>
-            <div className={styles.content_container}>
+            <div 
+              className={styles.content_container}
+              style={{ backgroundColor: work.bgColor }}
+            >
               <div className={styles.work_title_container}>
                 <h1 className={styles.work_title}>{work.title}</h1>
                 <span className={styles.work_type}>{work.type}</span>

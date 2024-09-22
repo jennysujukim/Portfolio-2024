@@ -5,7 +5,7 @@
 
   @include md {
     padding: $box_spacing_md;
-    height: calc(100vh - ($box_spacing_md * 2));
+    height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }

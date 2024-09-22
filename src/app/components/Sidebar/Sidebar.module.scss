@@ -4,6 +4,9 @@
   @include md {
     width: $sidebar_width_md;
     max-width: $sidebar_width_md;
+    height: 100vh;
+    overflow: hidden;
+    @include flex(flex-start, flex-start, column);
   }
 
   @include lg {
@@ -20,14 +23,21 @@
 
 .content_container {
   padding: $box_spacing_sm;
-  border-bottom: 1px solid $black_light;
+  border-bottom: 1px solid $grey_border;
+  min-height: 70vh;
+  @include flex(space-evenly, center, column);
 
-  @include md { padding: $box_spacing_md; }
+  @include md { 
+    height: unset;
+    display: block;
+    flex: 1;
+  }
+  @include lg { padding: $box_spacing_md; }
   @include xl { padding: $box_spacing_xl; }
 }
 
 .content {
-  margin: 2rem 0;
+  margin: 3rem 0;
 
   &_about {
     position: relative;
@@ -54,6 +64,7 @@
 
 .details_wrapper {
   margin-bottom: 2rem;
+  width: 100%;
 
   @include md { margin-bottom: 2rem; }
 
@@ -71,15 +82,15 @@
   a {
     text-decoration: underline;
     font-weight: bold;
-    color: $grey_light;
+    color: $black_light;
     margin-right: 0.2rem;
     transition: all 200ms ease-in-out;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
     @include md { font-size: 1rem; }
     @include xl { font-size: 1.2rem; }
 
-    &:hover { color: $black_light; }
+    &:hover { color: $grey_light; }
   }
 }
 
@@ -101,6 +112,7 @@
 
 .work_type {
   color: $grey_light;
+  mix-blend-mode: multiply;
 }
 
 .work_description_container {
@@ -122,6 +134,7 @@
 .work_keyword {
   font-size: 0.9rem;
   background: $lightgrey_light;
+  mix-blend-mode: hard-light;
   padding: $textbox_spacing_md;
   margin: 0.25rem 0;
   margin-right: 0.5rem;
@@ -132,7 +145,7 @@
 
 // ABOUT PAGE //
 .profile {
-  width: 75%;
+  width: 70%;
   max-width: 350px;
   height: auto;
   transform: rotate(-7deg);
