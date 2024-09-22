@@ -45,7 +45,7 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
         </Link>
       </div>
     )
-  } else if(path === "/about") {
+  } else if(path === "/about" || path === "/archives") {
     return(
       <div className={styles.container}>
         <Link 

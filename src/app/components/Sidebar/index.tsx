@@ -319,6 +319,74 @@ function GenerateContent({ path, work }: GenerateContentProps){
         }
       </>
     )
+  } else if (path === '/archives') {
+    return (
+      <div className={styles.content_container}>
+        <Link href="/">
+          <Image 
+            src={logo}
+            alt="logo of Jenny Kim Portfolio"
+            width={100}
+            height={50}
+            className={styles.logo}
+            draggable={false}
+          />
+        </Link>    
+        <div className={styles.content}>
+          <p>
+            This is the space where you can find all of my side projects, past works, projects for fun, my hobbies, etc.
+          </p>
+        </div>
+        <div className={styles.details_wrapper}>
+          <div className={styles.details_container}>
+            <h6>Contact</h6>
+            <Image 
+              src={arrowRight}
+              alt=""
+              width={20}
+              height={10}
+              className={styles.arrow}
+            />
+            <Link 
+              href="mailto:jennysujukim@gmail.com" 
+              target="_blank"
+            >
+              Email
+            </Link>
+          </div>
+          <div className={styles.details_container}>
+            <h6>Follow</h6>
+            <Image 
+              src={arrowRight}
+              alt=""
+              width={20}
+              height={10}
+              className={styles.arrow}
+            />
+            <div>
+                <Link 
+                  href="https://www.linkedin.com/in/jenny-seojeong-kim/" 
+                  target="_blank"
+                >
+                  LinkedIn,
+                </Link>
+                <Link 
+                  href="https://github.com/jennysujukim" 
+                  target="_blank"
+                >
+                  Github,
+                </Link>
+                <Link 
+                  href="https://www.instagram.com/byjennykim/" 
+                  target="_blank"
+                >
+                  IG
+                </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 }
 
