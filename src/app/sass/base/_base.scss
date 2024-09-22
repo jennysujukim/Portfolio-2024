@@ -50,12 +50,12 @@ button {
 // GLOBAL CLASSNAME //
 .sidebar_wrapper {
   width: 100%;
-  border-bottom: 1px solid $black_light;
+  border-bottom: 1px solid $grey_border;
 
   @include md {
     width: unset;
     border-bottom: unset;
-    border-right: 1px solid $black_light;
+    border-right: 1px solid $grey_border;
     height: 100vh;
   }
 }

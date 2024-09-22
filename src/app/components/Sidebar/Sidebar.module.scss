@@ -4,6 +4,9 @@
   @include md {
     width: $sidebar_width_md;
     max-width: $sidebar_width_md;
+    height: 100vh;
+    overflow: hidden;
+    @include flex(flex-start, flex-start, column);
   }
 
   @include lg {
@@ -20,9 +23,11 @@
 
 .content_container {
   padding: $box_spacing_sm;
-  border-bottom: 1px solid $black_light;
+  border-bottom: 1px solid $grey_border;
 
-  @include md { padding: $box_spacing_md; }
+  @include md { flex: 1;}
+
+  @include lg { padding: $box_spacing_md; }
   @include xl { padding: $box_spacing_xl; }
 }
 
@@ -71,7 +76,7 @@
   a {
     text-decoration: underline;
     font-weight: bold;
-    color: $grey_light;
+    color: $black_light;
     margin-right: 0.2rem;
     transition: all 200ms ease-in-out;
     font-size: 1.2rem;
@@ -79,7 +84,7 @@
     @include md { font-size: 1rem; }
     @include xl { font-size: 1.2rem; }
 
-    &:hover { color: $black_light; }
+    &:hover { color: $grey_light; }
   }
 }
 

@@ -3,11 +3,12 @@
 .footer {
   @include fixed($bottom: 0, $left: 0);
   width: 100%;
-  border-top: 1px solid $black_light;
+  border-top: 1px solid $grey_border;
 }
 
 .footer_texts {
-  font-size: 0.7rem;
+
+  color: blue;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -15,7 +16,6 @@
   @include md {
     text-align: unset;
     @include flex(space-between, center);
-    font-size: 0.9rem;
     margin-left: calc($sidebar_width_md + $box_spacing_md);
     margin-right: $box_spacing_md;
   }
@@ -27,5 +27,9 @@
   @include xl {
     margin-left: calc($sidebar_width_lg + $box_spacing_xl);
     margin-right: $box_spacing_xl;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 }

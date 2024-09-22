@@ -6,6 +6,7 @@
   @include md { 
     display: block;
     padding: $box_spacing_md; 
+    min-height: $header_height_md;
   }
   @include xl { padding: $box_spacing_xl; } 
 
@@ -42,18 +43,18 @@
     font-weight: 600;
     font-size: 1.3rem;
     position: relative;
-    color: $grey_light;
+    color: $black_light;
     transition: all 200ms ease-in-out;
 
     @include md { font-size: 2rem; }
 
-    &:hover { color: $black_light; }
+    &:hover { color: $grey_light; }
   }
 
   &_about {
     font-weight: 600;
     font-size: 1.3rem;
-    color: $grey_light;
+    color: $black_light;
     cursor: pointer;
     transition: all 200ms ease-in-out;
 
@@ -64,7 +65,7 @@
       @include md { border: unset; } 
     }
 
-    &:hover { color: $black_light; }
+    &:hover { color: $grey_light; }
   }
 }
 
