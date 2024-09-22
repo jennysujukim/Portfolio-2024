@@ -265,7 +265,10 @@ function GenerateContent({ path, work }: GenerateContentProps){
       <>
         {work &&
           <>
-            <div className={styles.content_container}>
+            <div 
+              className={styles.content_container}
+              style={{ backgroundColor: work.bgColor }}
+            >
               <div className={styles.work_title_container}>
                 <h1 className={styles.work_title}>{work.title}</h1>
                 <span className={styles.work_type}>{work.type}</span>
@@ -284,28 +287,32 @@ function GenerateContent({ path, work }: GenerateContentProps){
                 </div>
               </div>
               <div className={styles.details_container}>
-                <h6>View</h6>
-                <Image 
-                  src={arrowRight}
-                  alt=""
-                  width={20}
-                  height={10}
-                  className={styles.arrow}
-                />
-                <div>
-                  <Link 
-                    href={work.livesite}
-                    target="_blank"
-                  >
-                    Livesite,
-                  </Link>
-                  <Link
-                    href={work.repo}
-                    target="_blank"
-                  >
-                    Repo
-                  </Link>
-                </div>
+              {work.livesite && work.repo &&
+                  <>
+                    <h6>View</h6>
+                    <Image 
+                      src={arrowRight}
+                      alt=""
+                      width={20}
+                      height={10}
+                      className={styles.arrow}
+                    />
+                    <div>
+                      <Link 
+                        href={work.livesite}
+                        target="_blank"
+                      >
+                        Livesite,
+                      </Link>
+                      <Link
+                        href={work.repo}
+                        target="_blank"
+                      >
+                        Repo
+                      </Link>
+                    </div>
+                  </>              
+                }
               </div>
             </div>
           </>

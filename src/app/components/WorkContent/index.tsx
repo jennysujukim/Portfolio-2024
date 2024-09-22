@@ -29,18 +29,21 @@ export default function WorkContent() {
                 <p key={index}>{sentence}</p>
               ))}
             </div>
-            <div className={styles.text_container}>
-              <h3>Challenge</h3>
-              {work.content.challenge.map((sentence, index) => (
-                <p key={index}>{sentence}</p>
-              ))}
+            <div className={styles.text_wrapper}>
+              <div className={styles.text_container}>
+                <h3>Challenge</h3>
+                {work.content.challenge.map((sentence, index) => (
+                  <p key={index}>{sentence}</p>
+                ))}
+              </div>
+              <div className={styles.text_container}>
+                <h3>Solution</h3>
+                {work.content.solution.map((sentence, index) => (
+                  <p key={index}>{sentence}</p>
+                ))}
+              </div>
             </div>
-            <div className={styles.text_container}>
-              <h3>Solution</h3>
-              {work.content.solution.map((sentence, index) => (
-                <p key={index}>{sentence}</p>
-              ))}
-            </div>
+
           </section>
           <section className={styles.section}>
             {work.content.graphics.map((graphic, index) => (
