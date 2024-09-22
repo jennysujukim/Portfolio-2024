@@ -1,10 +1,10 @@
 @use "../../sass/abstracts/" as *;
 
 .wrapper {
-  width: 100%;
+  width: fit-content;
   position: sticky;
   top: $box_spacing_sm;
-  margin: 2rem auto 1rem auto;
+  margin: 3rem auto;
   z-index: 20;
   height: $subNav_height_lg;
   @include flex(center, center);
@@ -25,34 +25,35 @@
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(30px);
-  width: 100%;
 
-  @include md { 
-    width: unset; 
-    // height: 45px;
-  }; 
+  @include md {  width: unset; }; 
 }
 
 .button {
-  max-width: 120px;
+  width: 23vw;
   flex-basis: 33.33%;
   border-radius: 30px;
   height: 2rem;
   font-weight: 500;
 
   @include md { 
-    max-width: unset;
+    width: unset;
     min-width: 130px; 
   }
 
   &:hover { background: rgba(148, 148, 148, 0.3); }
 
   .button_inner {
-    width: 100%;
+    width: 23vw;
     @include flex(center, center);
     transition: all 200ms ease-in-out;
     border-radius: 30px;
     height: 2rem;
+
+    @include md { 
+      width: unset;
+      min-width: 130px; 
+    }
   }
 }
 

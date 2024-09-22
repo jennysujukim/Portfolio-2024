@@ -21,7 +21,7 @@
 .navlink, .navlink_about {
   flex-basis: 50%;
   text-align: center;
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
 
   @include md {
     flex-basis: unset;
@@ -33,15 +33,15 @@
   }
 
   &:nth-child(2){
-    border-left: 1px solid $black_light;
-    border-right: 1px solid $black_light;
+    border-left: 1px solid $grey_border;
+    border-right: 1px solid $grey_border;
 
     @include md { border: unset; } 
   }
 
   a {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1rem;
     position: relative;
     color: $black_light;
     transition: all 200ms ease-in-out;

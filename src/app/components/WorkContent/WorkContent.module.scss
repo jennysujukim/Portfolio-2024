@@ -5,7 +5,18 @@
 }
 
 .section {
-  margin-bottom: 8rem;
+  margin-bottom: 3.5rem;
+
+  @include xl { @include flex(center, center, column); }
+
+  div {
+    @include xl { max-width: $content_maxWidth_lg; }
+  }
+}
+
+.text_wrapper {
+  @include md { @include grid(repeat(8, 1fr), 1rem) }
+
 }
 
 .text_container, .intro_container {
@@ -33,8 +44,27 @@
   margin-bottom: 4rem;
 }
 
+.text_container {
+  @include md { 
+    @include gridCol(auto, 4); 
+    padding: 1rem;
+  };
+
+  p {
+    @include md { font-size: 1.2rem };
+    @include xl { font-size: 1.5rem };
+  }
+
+
+
+  &:nth-child(1) {
+    @include md { border-right: 1px solid $grey_border; };
+  }
+}
+
 .video, .image {
   width: 100%;
   height: auto;
+  max-width: $content_maxWidth_lg;
   margin-bottom: 3rem;
 }

@@ -6,6 +6,7 @@ export const workData = () => {
     works: [
       {
         id: 1,
+        bgColor: "#fdf2f1",
         slug: "sadie-lee",
         title: "Sadie Lee",
         description: "Headless CMS web development for a graphic designer’s portfolio.",
@@ -80,6 +81,7 @@ export const workData = () => {
       },
       {
         id: 2,
+        bgColor: "#ff6870",
         slug: "belong-where-you-are",
         title: "Belong Where You Are",
         description: "Digital album that showcase photos taken with Fuji Quicksnap.",
@@ -158,6 +160,7 @@ export const workData = () => {
       },
       {
         id: 3,
+        bgColor: "#edf9fe",
         slug: "phonebox-app",
         title: "PhoneBox App",
         description: "Digital album that showcase photos taken with Fuji Quicksnap.",
@@ -236,6 +239,7 @@ export const workData = () => {
       },
       {
         id: 4,
+        bgColor: "#ffc1a4",
         slug: "daily-protein",
         title: "Daily Protein Tracker",
         description: "Sign up, calculate, track your daily protein intake.",
