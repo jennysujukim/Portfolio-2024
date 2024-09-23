@@ -113,7 +113,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
         </Link>
         <div className={styles.content}>
           <h1>
-            Hi! I’m <span className={styles.bold}>UIUX Engineer</span> building and designing <span className={styles.underline}>interactive</span> user experiences on the <span>web</span> with the strong foundations of design.
+            Hi! I’m a <span className={styles.bold}>UI/UX Engineer</span> specializing in crafting <span className={styles.underline}>interactive</span> web experiences, built on a strong foundation of design principles.
           </h1>
         </div>
         <div className={styles.details_wrapper}>

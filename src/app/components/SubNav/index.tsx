@@ -31,7 +31,7 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
           className={`${styles.button} ${styles.button_goback}`}
         >
           <div className={styles.button_inner}>
-            Go Back
+            Go Home
           </div>
         </Link>
         <Link 

@@ -33,17 +33,18 @@ export const workData = () => {
             alt: "thumbnail 1",
           },
         ],
+        private: false,
         livesite: "https://www.sadielee-design.com",
         repo: "https://github.com/jennysujukim/sadie-lee-personal-website",
         content: {
           intro: [
-            "Sadie Lee is a graphic designer based in London creating experimental design practices. The client requires the portfolio website that showcases her artworks but also interactive site that engage visitors and expresses her creativity at the same time. Main design is done by Sadie Lee, and I developed and offer the feasible and interactive features.",
+            "Sadie Lee, a London-based graphic designer, specializes in experimental design practices. Her portfolio site showcases her artworks while providing an interactive experience that engages visitors and reflects her creativity. Sadie led the main design, while I developed and implemented interactive features to bring her vision to life.",
           ],
           challenge: [
-            "The client requires to edit by herself in the future without changing codebase. Balancing the creativity and feasibility on the web was challenging to negotiate while keeping the good UX system."
+            "The client needed the ability to edit the site independently without altering the codebase. She also requested a unique interactive feature on the homepage to engage visitors."
           ],
           solution: [
-            "Integrate headless CMS so the work can keep creative visual but also effortlessly manage the content by client. Optimised SEO."
+            "I integrated a headless CMS to enable effortless content management while maintaining the creative visual design. I also recommended MatterJS for designing 2D rigid body graphics, balancing creativity with technical feasibility. Additionally, the site was optimized for SEO to improve visibility and performance."
           ],
           graphics: [
             {
@@ -84,10 +85,10 @@ export const workData = () => {
         bgColor: "#ff6870",
         slug: "belong-where-you-are",
         title: "Belong Where You Are",
-        description: "Digital album that showcase photos taken with Fuji Quicksnap.",
+        description: "Interactive digital photo album.",
         category: [ CategoryType.DEVELOP, CategoryType.DESIGN ],
         type: "Personal work",
-        keywords: [ "Web Development", "Digital Design", "Next JS", "Contentful", "TypeScript" ],
+        keywords: [ "Web Development", "Digital Design", "NextJS", "Contentful", "TypeScript" ],
         thumbnails: [
           {
             id: "2_1",
@@ -108,21 +109,18 @@ export const workData = () => {
             alt: "thumbnail 3",
           },
         ],
+        private: false,
         livesite: "https://belong-where-you-are.vercel.app",
         repo: "https://github.com/jennysujukim/belong-where-you-are",
         content: {
           intro: [
-            "intro sentence 1",
-            "intro sentence 2",
-            "intro sentence 3",
+            "This personal project showcases film photos I’ve taken with a Fuji Quicksnap. As someone who has lived in different cities, I find joy and comfort in feeling a sense of belonging wherever I am. I created this web space to preserve and share those memories. Users can easily navigate through the photos by scrolling or using arrow buttons to view images, allowing them to seamlessly experience the story behind each one."
           ],
           challenge: [
-            "challenge sentence 1",
-            "challenge sentence 2"
+            "I want to manage large images and their content efficiently, without accessing the codebase, while ensuring optimal site speed.", 
           ],
           solution: [
-            "solution sentence 1",
-            "solution sentence 2",
+            "I seamlessly integrated server and client components in Next.js and fetched data from Contentful CMS to optimize site performance and streamline content management."
           ],
           graphics: [
             {
@@ -162,11 +160,11 @@ export const workData = () => {
         id: 3,
         bgColor: "#edf9fe",
         slug: "phonebox-app",
-        title: "PhoneBox App",
-        description: "Digital album that showcase photos taken with Fuji Quicksnap.",
+        title: "PhoneBox Partner Portal App",
+        description: "Project to launch mobile app during the internship at PhoneBox.",
         category: [ CategoryType.DEVELOP ],
-        type: "Personal work",
-        keywords: [ "Web Development", "Digital Design", "Next JS", "Contentful", "TypeScript" ],
+        type: "Company work",
+        keywords: [ "React Native", "Expo", "TypeScript", "Redux" ],
         thumbnails: [
           {
             id: "3_1",
@@ -187,21 +185,18 @@ export const workData = () => {
             alt: "thumbnail 3",
           },
         ],
+        private: true,
         livesite: "https://belong-where-you-are.vercel.app",
         repo: "https://github.com/jennysujukim/belong-where-you-are",
         content: {
           intro: [
-            "intro sentence 1",
-            "intro sentence 2",
-            "intro sentence 3",
+            "PhoneBox is a company providing network services for short-term visitors in Canada and the U.S. During my internship, I contributed to the development of the newly launched Partner Portal App."
           ],
           challenge: [
-            "challenge sentence 1",
-            "challenge sentence 2"
+            "It is essential to create a seamless experience on both the web and app using React Native. Fetching and displaying up-to-date data from the server database is crucial due to extensive API communication by users."
           ],
           solution: [
-            "solution sentence 1",
-            "solution sentence 2",
+            "I integrated a REST API into the frontend and utilized Redux to manage and preserve state across the entire app, ensuring that users see up-to-date data as changes occur.",
           ],
           graphics: [
             {
@@ -266,21 +261,18 @@ export const workData = () => {
             alt: "thumbnail 3",
           },
         ],
+        private: false,
         livesite: "https://daily-protein.seojeongkim.com/",
         repo: "https://github.com/jennysujukim/DailyProtein2.0_MERN",
         content: {
           intro: [
-            "intro sentence 1",
-            "intro sentence 2",
-            "intro sentence 3",
+            "This personal project helps users track their daily protein intake. As someone passionate about healthy eating, I know calculating the right protein amount can be tricky, depending on body type and goals. I built a simple web app where users can easily calculate their daily protein needs, set goals, and log meals to track progress."
           ],
           challenge: [
-            "challenge sentence 1",
-            "challenge sentence 2"
+            "I need to fetch nutrition data for each food item, allowing users to create accounts and perform CRUD operations on their protein intake.",
           ],
           solution: [
-            "solution sentence 1",
-            "solution sentence 2",
+            "I integrated the Edamam API to retrieve food nutrition, enabling users to search food from the API's database. I also connected Firebase for user authentication and used MongoDB to allow users to log their protein intake.",
           ],
           graphics: [
             {
@@ -316,126 +308,6 @@ export const workData = () => {
           ],
         }
       },
-      // {
-      //   id: 5,
-      //   slug: "dancheong",
-      //   title: "Dancheong",
-      //   description: "Graphic design inspired by Korean traditional dancheong.",
-      //   category: [ CategoryType.DESIGN ],
-      //   type: "Personal work",
-      //   keywords: [ "Graphic Design", "Digital Design", "Illustration" ],
-      //   thumbnails: [
-      //     // {
-      //     //   id: "3_1",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-1.jpg",
-      //     //   alt: "thumbnail 1",
-      //     // },
-      //     // {
-      //     //   id: "3_2",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-2.jpg",
-      //     //   alt: "thumbnail 2",
-      //     // },
-      //   ],
-      //   livesite: "https://daily-protein.seojeongkim.com/",
-      //   repo: "https://github.com/jennysujukim/DailyProtein2.0_MERN",
-      //   content: {
-      //     intro: [
-      //       "intro sentence 1",
-      //       "intro sentence 2",
-      //       "intro sentence 3",
-      //     ],
-      //     challenge: [
-      //       "challenge sentence 1",
-      //       "challenge sentence 2"
-      //     ],
-      //     solution: [
-      //       "solution sentence 1",
-      //       "solution sentence 2",
-      //     ],
-      //   }
-      // },
-      // {
-      //   id: 6,
-      //   slug: "everything-turns-to-poster",
-      //   title: "Everything Turns to Poster",
-      //   description: "Graphic design inspired by Korean traditional dancheong.",
-      //   category: [ CategoryType.DESIGN ],
-      //   type: "Personal work",
-      //   keywords: [ "Graphic Design", "Digital Design", "Illustration" ],
-      //   thumbnails: [
-      //     // {
-      //     //   id: "3_1",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-1.jpg",
-      //     //   alt: "thumbnail 1",
-      //     // },
-      //     // {
-      //     //   id: "3_2",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-2.jpg",
-      //     //   alt: "thumbnail 2",
-      //     // },
-      //   ],
-      //   livesite: "https://daily-protein.seojeongkim.com/",
-      //   repo: "https://github.com/jennysujukim/DailyProtein2.0_MERN",
-      //   content: {
-      //     intro: [
-      //       "intro sentence 1",
-      //       "intro sentence 2",
-      //       "intro sentence 3",
-      //     ],
-      //     challenge: [
-      //       "challenge sentence 1",
-      //       "challenge sentence 2"
-      //     ],
-      //     solution: [
-      //       "solution sentence 1",
-      //       "solution sentence 2",
-      //     ],
-      //   }
-      // },
-      // {
-      //   id: 7,
-      //   slug: "sannerexperiments",
-      //   title: "Scanner Experiments",
-      //   description: "Graphic design inspired by Korean traditional dancheong.",
-      //   category: [ CategoryType.DESIGN ],
-      //   type: "Personal work",
-      //   keywords: [ "Graphic Design", "Digital Design", "Illustration" ],
-      //   thumbnails: [
-      //     // {
-      //     //   id: "3_1",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-1.jpg",
-      //     //   alt: "thumbnail 1",
-      //     // },
-      //     // {
-      //     //   id: "3_2",
-      //     //   type: ContentType.IMAGE,
-      //     //   src: "/works/phonebox/thumbnail-2.jpg",
-      //     //   alt: "thumbnail 2",
-      //     // },
-      //   ],
-      //   livesite: "https://daily-protein.seojeongkim.com/",
-      //   repo: "https://github.com/jennysujukim/DailyProtein2.0_MERN",
-      //   content: {
-      //     intro: [
-      //       "intro sentence 1",
-      //       "intro sentence 2",
-      //       "intro sentence 3",
-      //     ],
-      //     challenge: [
-      //       "challenge sentence 1",
-      //       "challenge sentence 2"
-      //     ],
-      //     solution: [
-      //       "solution sentence 1",
-      //       "solution sentence 2",
-      //     ],
-      //   }
-      // },
     ] as Work[]
   }
 }
