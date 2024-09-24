@@ -1,9 +1,15 @@
+// components
+import SubNav from "../components/SubNav";
+// styles
 import styles from "./archivesPage.module.scss";
 
 export default function ArchivesPage() {
   return (
-    <div className={styles.page}>
-      <div>Archives</div>
-    </div>
+    <>
+      <SubNav />
+      <div className={styles.page}>
+        <section>TBC...</section>
+      </div>
+    </>
   );
 }

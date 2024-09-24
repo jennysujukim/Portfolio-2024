@@ -31,7 +31,7 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
           className={`${styles.button} ${styles.button_goback}`}
         >
           <div className={styles.button_inner}>
-            Go Back
+            Go Home
           </div>
         </Link>
         <Link 
@@ -45,7 +45,7 @@ function GenerateContent({ path, nextWork, selectedCategory, handleClickFilter }
         </Link>
       </div>
     )
-  } else if(path === "/about") {
+  } else if(path === "/about" || path === "/archives") {
     return(
       <div className={styles.container}>
         <Link 
