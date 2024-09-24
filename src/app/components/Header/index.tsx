@@ -84,6 +84,11 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
           </nav>
         </header>
       }
+      {path === '/archives' &&
+        <header className={styles.header}>
+
+        </header>
+      }
     </>
   )
 }

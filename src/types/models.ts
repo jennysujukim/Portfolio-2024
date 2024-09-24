@@ -15,6 +15,7 @@ export type Work = {
     src: string;
     alt: string;
   }[];
+  private: boolean;
   livesite?: string;
   repo?: string;
   content: {
