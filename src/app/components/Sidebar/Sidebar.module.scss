@@ -48,7 +48,7 @@
 
 .bold {
   font-weight: 600;
-  background: blue;
+  background: $blue;
   display: inline-block;
   transform: rotate(355deg);
   color: $white_light;
@@ -57,7 +57,7 @@
 
 .underline {
   font-style: italic;
-  background: yellow;
+  background: $yellow;
   font-weight: 600;
   display: inline-block;
   transform: rotate(3deg);
@@ -159,7 +159,7 @@
 .profile_description {
   max-width: 200px;
   @include absolute($bottom: -10px, $right: -5px);
-  background-color: blue;
+  background-color: $blue;
   color: $white_light;
   padding: $textbox_spacing_md;
   transform: rotate(3deg);
@@ -169,7 +169,7 @@
   @include absolute($bottom: 85px, $left: -53px);
   transform: rotate(262deg);
   font-size: 0.9rem;
-  background-color: yellow;
+  background-color: $yellow;
 
   @include md {
     @include absolute($bottom: 85px, $left: -75px);

@@ -19,8 +19,18 @@ const inconsolata = Inconsolata({
 })
 
 export const metadata: Metadata = {
-  title: "Jenny Kim - UIUX Engineer",
-  description: "Jenny Kim is a UIUX Engineer based in Vancouver.",
+  metadataBase: new URL('https://www.seojeongkim.com'),
+  title: "Jenny Kim — UIUX Engineer",
+  description: "Jenny Kim, based in Vancouver, is a UI/UX Engineer specializing in crafting interactive web experiences, built on a strong foundation of design principles.",
+  keywords: 'Vancouver UIUX Engineer, Vancouver Frontend Developer, Vancouver UIUX Designer, Vancouver Web Developer, Vancouver Web Designer, Vancouver Web Development, Vancouver Web Design, BCIT Web Developer, BCIT Web Designer, BCIT UIUX Designer, BCIT Web Design, BCIT Web Development, Vancouver Freelance Web Developer, Vancouver Freelance Web Designer, Vancouver Freelance Designer',
+  openGraph: {
+    title: 'Jenny Kim - UIUX Engineer',
+    description: 'Jenny Kim, based in Vancouver, is a UI/UX Engineer specializing in crafting interactive web experiences, built on a strong foundation of design principles.',
+    images: '/og-image.png',
+    url: 'https://www.seojeongkim.com/',
+    type: 'website',
+    locale: 'en'
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
