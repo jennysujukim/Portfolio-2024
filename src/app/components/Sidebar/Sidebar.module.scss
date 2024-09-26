@@ -77,6 +77,7 @@
 .details_container {
   @include flex(flex-start, center);
   margin-bottom: 0.5rem;
+  width: 100%;
 
   h6 { min-width: 70px; }
 
@@ -102,6 +103,10 @@
 // WORK PAGE //
 .work_title_container {
   margin-bottom: $box_spacing_md;
+  @include flex(flex-start, flex-start, column);
+  width: 100%;
+
+  @include md { display: block; }
 }
 
 .work_title {

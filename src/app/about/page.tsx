@@ -40,28 +40,28 @@ export default function AboutPage() {
               <h6>Experience</h6>
               <div>
                 <div className={styles.card_list}>
+                  <p className={styles.list_year}>2023</p>
                   <div className={styles.list_title_container}>
                     <MdOutlineSubdirectoryArrowRight size={14} /> 
                     <p>Frontend Developer Intern</p>
                   </div>
                   <p>@PhoneBox</p>
-                  <p className={styles.list_year}>2023</p>
                 </div>
                 <div className={styles.card_list}>
+                  <p className={styles.list_year}>2021</p>
                   <div className={styles.list_title_container}>
                     <MdOutlineSubdirectoryArrowRight size={14} /> 
                     <p>Assistant Online Merchandiser</p>
                   </div>
                   <p>@The Handsome Corp.</p>
-                  <p className={styles.list_year}>2021</p>
                 </div>
                 <div className={styles.card_list}>
+                  <p className={styles.list_year}>2020 - 2021</p>
                   <div className={styles.list_title_container}>
                     <MdOutlineSubdirectoryArrowRight size={14} /> 
                     <p>Digital Marketing Consultant</p>
                   </div>
                   <p>@X NIHILO Pty Ltd</p>
-                  <p className={styles.list_year}>2020 - 2021</p>
                 </div>
               </div>
             </div>
@@ -110,20 +110,20 @@ export default function AboutPage() {
               <h6>Education</h6>
               <div>
                 <div className={styles.card_list}>
+                  <p className={styles.list_year}>2022 - 2023</p>
                   <div className={styles.list_title_container}>
                     <MdOutlineSubdirectoryArrowRight size={14} /> 
                     <p>British Columbia Institute of Technology</p>
                  </div>
                   <p>Diploma of New Media Design and Web Development</p>
-                  <p className={styles.list_year}>2022 - 2023</p>
                 </div>
                 <div className={styles.card_list}>
+                  <p className={styles.list_year}>2018 - 2020</p>
                   <div className={styles.list_title_container}>
                     <MdOutlineSubdirectoryArrowRight size={14} /> 
                     <p>Royal Melbourne Institute of Technology</p>
                   </div>
                   <p>Bachelor of Fashion (Merchandise Management)</p>
-                  <p className={styles.list_year}>2018 - 2020</p>
                 </div>
               </div>
             </div>

@@ -13,6 +13,7 @@ export type Work = {
     id: string;
     type: ContentType;
     src: string;
+    placeholder?: string;
     alt: string;
   }[];
   private: boolean;
@@ -26,6 +27,7 @@ export type Work = {
       id: number;
       type: ContentType;
       src: string;
+      placeholder?: string;
       alt: string;
       description?: string;
     }[];
