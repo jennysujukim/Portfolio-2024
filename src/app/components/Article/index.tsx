@@ -42,6 +42,10 @@ export default function Article({ work } : ArticleProps) {
               height={300}
               alt={thumbnail.alt}
               className={`${styles.image} ${styles[`transform_${thumbnail.id}`]}`}
+              priority
+              placeholder="blur"
+              blurDataURL={thumbnail.placeholder}
+              quality={100}
             />
             }
           </React.Fragment>

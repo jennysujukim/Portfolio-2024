@@ -31,6 +31,17 @@ function GenerateContent({ path, work }: GenerateContentProps){
     "/about/profile-8.jpg"
   ]
 
+  const imgPlaceholders = [ 
+    "/about/profile-1-placeholder.jpg", 
+    "/about/profile-2-placeholder.jpg", 
+    "/about/profile-3-placeholder.jpg", 
+    "/about/profile-4-placeholder.jpg",
+    "/about/profile-5-placeholder.jpg", 
+    "/about/profile-6-placeholder.jpg", 
+    "/about/profile-7-placeholder.jpg", 
+    "/about/profile-8-placeholder.jpg"
+  ]
+
   const imgDescriptions = [
     "This is me smiling :)", 
     "After 10hrs of hiking!", 
@@ -43,6 +54,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
   ]
 
   const [currentImg, setCurrentImg] = useState<string>(imgSrcs[0])
+  const [currentPlaceholder, setCurrentPlaceholder] = useState<string>(imgPlaceholders[0])
   const [ currentDescription, setCurrentDescription ] = useState<string>(imgDescriptions[0])
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
@@ -67,6 +79,17 @@ function GenerateContent({ path, work }: GenerateContentProps){
     "/about/profile-8.jpg"
   ]
 
+  const keyPressimgPlaceholders = [ 
+    "/about/profile-1-placeholder.jpg", 
+    "/about/profile-2-placeholder.jpg", 
+    "/about/profile-3-placeholder.jpg", 
+    "/about/profile-4-placeholder.jpg",
+    "/about/profile-5-placeholder.jpg", 
+    "/about/profile-6-placeholder.jpg", 
+    "/about/profile-7-placeholder.jpg", 
+    "/about/profile-8-placeholder.jpg"
+  ]
+
   const keyPressimgDescriptions = [
     "This is me smiling :)", 
     "After 10hrs of hiking!", 
@@ -80,6 +103,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
 
     const changeProfile = () => {
       const nextIndex = (currentIndex + 1) % keyPressimgSrcs.length
+      setCurrentPlaceholder(keyPressimgPlaceholders[nextIndex])
       setCurrentImg(keyPressimgSrcs[nextIndex])
       setCurrentDescription(keyPressimgDescriptions[nextIndex])
       setCurrentIndex(nextIndex)
@@ -109,6 +133,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
             height={50}
             className={styles.logo}
             draggable={false}
+            priority
           />
         </Link>
         <div className={styles.content}>
@@ -177,6 +202,7 @@ function GenerateContent({ path, work }: GenerateContentProps){
               height={50}
               className={styles.logo}
               draggable={false}
+              priority
             />
           </Link>
           <div 
@@ -190,6 +216,9 @@ function GenerateContent({ path, work }: GenerateContentProps){
               height={300}
               draggable={false}
               className={styles.profile}
+              priority
+              placeholder="blur"
+              blurDataURL={currentPlaceholder}
             />
             <span className={styles.profile_cta}>* Click Image or Press Spacebar *</span>
             <span className={styles.profile_description}>{currentDescription}</span>

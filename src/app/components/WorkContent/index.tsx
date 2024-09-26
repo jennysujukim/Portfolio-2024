@@ -69,6 +69,10 @@ export default function WorkContent() {
                     alt={graphic.alt}
                     width={500}
                     height={500}
+                    priority
+                    blurDataURL={graphic.placeholder}
+                    placeholder='blur'
+                    quality={100}
                   />
                 }
               </React.Fragment>

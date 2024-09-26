@@ -48,7 +48,7 @@
 
 .bold {
   font-weight: 600;
-  background: blue;
+  background: $blue;
   display: inline-block;
   transform: rotate(355deg);
   color: $white_light;
@@ -159,7 +159,7 @@
 .profile_description {
   max-width: 200px;
   @include absolute($bottom: -10px, $right: -5px);
-  background-color: blue;
+  background-color: $blue;
   color: $white_light;
   padding: $textbox_spacing_md;
   transform: rotate(3deg);

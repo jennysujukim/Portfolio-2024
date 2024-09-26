@@ -29,11 +29,11 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
                   Resume
                 </Link>
               </li>
-              <li className={styles.navlink}>
+              {/* <li className={styles.navlink}>
                 <Link href="/archives">
                   Archives
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </header>
@@ -77,11 +77,11 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
                   Resume
                 </Link>
               </li>
-              <li className={styles.navlink}>
+              {/* <li className={styles.navlink}>
                 <Link href="/archives">
                   Archives
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </header>
