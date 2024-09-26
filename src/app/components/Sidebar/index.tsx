@@ -6,8 +6,10 @@ import { usePathname } from "next/navigation";
 import { workData } from "@/lib/workData";
 import { Work } from "@/types/models";
 // assets
+import { MdLockOutline } from "react-icons/md";
 import logo from "@/app/assets/logo.svg";
 import arrowRight from "@/app/assets/arrow-right.svg";
+import resumePdf from "@/app/assets/Resume_JennyKim.pdf";
 // components
 import Header from "@/app/components/Header";
 // styles
@@ -280,10 +282,10 @@ function GenerateContent({ path, work }: GenerateContentProps){
                 className={styles.arrow}
               />
               <Link 
-                href="https://www.linkedin.com/in/jenny-seojeong-kim/" 
+                href={resumePdf}
                 target="_blank"
               >
-                CV
+                Resume
               </Link>
             </div>
           </div>
@@ -326,20 +328,26 @@ function GenerateContent({ path, work }: GenerateContentProps){
                       height={10}
                       className={styles.arrow}
                     />
-                    <div>
-                      <Link 
-                        href={work.livesite}
-                        target="_blank"
-                      >
-                        Livesite,
-                      </Link>
-                      <Link
-                        href={work.repo}
-                        target="_blank"
-                      >
-                        Repo
-                      </Link>
-                    </div>
+                    {work.private ?
+                      <MdLockOutline 
+                        size={20}
+                      />
+                      :
+                      <div>
+                        <Link 
+                          href={work.livesite}
+                          target="_blank"
+                        >
+                          Livesite,
+                        </Link>
+                        <Link
+                          href={work.repo}
+                          target="_blank"
+                        >
+                          Repo
+                        </Link>
+                      </div>
+                    }
                   </>              
                 }
               </div>
