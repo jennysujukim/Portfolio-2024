@@ -1,4 +1,6 @@
 import Link from 'next/link'
+// assets
+import resumePdf from '@/app/assets/Resume_JennyKim.pdf'
 // styles
 import styles from './Header.module.scss'
 
@@ -21,7 +23,7 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
               </li>
               <li className={styles.navlink}>
                 <Link 
-                  href="/resume" 
+                  href={resumePdf} 
                   target="_blank"
                 >
                   Resume
@@ -69,7 +71,7 @@ export default function Header({ path, onClickScroll }: HeaderProps) {
               </li>
               <li className={styles.navlink}>
                 <Link 
-                  href="/resume" 
+                  href={resumePdf}
                   target="_blank"
                 >
                   Resume
